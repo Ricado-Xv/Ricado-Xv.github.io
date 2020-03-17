@@ -153,8 +153,7 @@ System.out.printIn(UserRole.valueOf(&quot;ROLE_NORMAL&quot;) );//打印role3</co
      ...
      break;
 }</code></pre><hr>
-<h3 id="3-枚举类型的拓展性"><a href="#3-枚举类型的拓展性" class="headerlink" title="3.枚举类型的拓展性:"></a>3.枚举类型的拓展性:</h3><p>#####例如在枚举里加入角色名-编码的对应关系,并且自定义一些属性,构造函数,甚至各种方法.和class一样.</p>
-<pre><code>  public enum UserRole{
+<h3 id="3-枚举类型的拓展性"><a href="#3-枚举类型的拓展性" class="headerlink" title="3.枚举类型的拓展性:"></a>3.枚举类型的拓展性:</h3><h5 id="例如在枚举里加入角色名-编码的对应关系-并且自定义一些属性-构造函数-甚至各种方法-和class一样"><a href="#例如在枚举里加入角色名-编码的对应关系-并且自定义一些属性-构造函数-甚至各种方法-和class一样" class="headerlink" title="例如在枚举里加入角色名-编码的对应关系,并且自定义一些属性,构造函数,甚至各种方法.和class一样."></a>例如在枚举里加入角色名-编码的对应关系,并且自定义一些属性,构造函数,甚至各种方法.和class一样.</h5><pre><code>  public enum UserRole{
 
   ROLE_ROOT_ADMIN( &quot;系统管理员&quot;,000000),
   ROLE_ORDER_ADMIN( &quot;订单管理员&quot;,100000),
@@ -226,8 +225,7 @@ public class JudgeRole{
      return RoleEnum.valueOf(roleName).op();
   }
 }</code></pre><hr>
-<p>###5. 枚举与设计模式<br>#####① 单例模式</p>
-<pre><code>public class Singleton{
+<h3 id="5-枚举与设计模式"><a href="#5-枚举与设计模式" class="headerlink" title="5. 枚举与设计模式"></a>5. 枚举与设计模式</h3><h5 id="①-单例模式"><a href="#①-单例模式" class="headerlink" title="① 单例模式"></a>① 单例模式</h5><pre><code>public class Singleton{
   //构造函数私有化,避免外部创建实例
   private Singleton(){
 
@@ -253,8 +251,7 @@ public class JudgeRole{
   public static Singleton getInstnce(){
      return SingletonEnum.SEED.getInstnce();//通过唯一的枚举对象完成
   }</code></pre><p>   }</p>
-<p>#####②策略模式<br>#####这里举例写一个加减乘除计算器</p>
-<pre><code>public class Test{
+<h5 id="②策略模式"><a href="#②策略模式" class="headerlink" title="②策略模式"></a>②策略模式</h5><h5 id="这里举例写一个加减乘除计算器"><a href="#这里举例写一个加减乘除计算器" class="headerlink" title="这里举例写一个加减乘除计算器"></a>这里举例写一个加减乘除计算器</h5><pre><code>public class Test{
 
   public enum Calculator{
 
@@ -289,11 +286,9 @@ public class JudgeRole{
      System.out.printIn(Calculator.ADDITION.execute(4.0,2.0));//打印6.0
   }</code></pre><p>   }</p>
 <hr>
-<p>###6.专用于枚举的集合类</p>
-<h5 id="对应于HashMap和HashSet-枚举有专门的集合类-EnumSet和EnumMap"><a href="#对应于HashMap和HashSet-枚举有专门的集合类-EnumSet和EnumMap" class="headerlink" title="对应于HashMap和HashSet,枚举有专门的集合类:EnumSet和EnumMap"></a>对应于HashMap和HashSet,枚举有专门的集合类:EnumSet和EnumMap</h5><h5 id="以开头的枚举类型为例"><a href="#以开头的枚举类型为例" class="headerlink" title="以开头的枚举类型为例:"></a>以开头的枚举类型为例:</h5><pre><code>public enum UserRole{
+<h3 id="6-专用于枚举的集合类"><a href="#6-专用于枚举的集合类" class="headerlink" title="6.专用于枚举的集合类"></a>6.专用于枚举的集合类</h3><h5 id="对应于HashMap和HashSet-枚举有专门的集合类-EnumSet和EnumMap"><a href="#对应于HashMap和HashSet-枚举有专门的集合类-EnumSet和EnumMap" class="headerlink" title="对应于HashMap和HashSet,枚举有专门的集合类:EnumSet和EnumMap"></a>对应于HashMap和HashSet,枚举有专门的集合类:EnumSet和EnumMap</h5><h5 id="以开头的枚举类型为例"><a href="#以开头的枚举类型为例" class="headerlink" title="以开头的枚举类型为例:"></a>以开头的枚举类型为例:</h5><pre><code>public enum UserRole{
    ROLE_NORMAL,ROLE_ORDER_ADMIN,ROLE_ROOT_ADMIN
-}</code></pre><p>#####①EnumSet       </p>
-<h5 id="比如系统里来了一批人-查看他是不是枚举类型里的某个角色"><a href="#比如系统里来了一批人-查看他是不是枚举类型里的某个角色" class="headerlink" title="比如系统里来了一批人,查看他是不是枚举类型里的某个角色"></a>比如系统里来了一批人,查看他是不是枚举类型里的某个角色</h5><pre><code>//定义一个管理员角色的专属集合
+}</code></pre><h5 id="①EnumSet"><a href="#①EnumSet" class="headerlink" title="①EnumSet"></a>①EnumSet</h5><h5 id="比如系统里来了一批人-查看他是不是枚举类型里的某个角色"><a href="#比如系统里来了一批人-查看他是不是枚举类型里的某个角色" class="headerlink" title="比如系统里来了一批人,查看他是不是枚举类型里的某个角色"></a>比如系统里来了一批人,查看他是不是枚举类型里的某个角色</h5><pre><code>//定义一个管理员角色的专属集合
 EnumSet&lt;UserRole&gt; userRoleForAdmin
   =EnumSet.of(
      UserRole.ROLE_ORDER_ADMIN,
@@ -315,12 +310,11 @@ for(User user : userList){
   }else{
      userStatisticMap.put(user.getUserRole(),1);
   }
-}</code></pre><p>#感谢微信公众号CodeSheep   </p>
-
+}</code></pre><h1 id="感谢微信公众号CodeSheep"><a href="#感谢微信公众号CodeSheep" class="headerlink" title="感谢微信公众号CodeSheep"></a>感谢微信公众号CodeSheep</h1>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ricado-xv.github.io/2020/03/17/%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%A7%98%E5%AF%86/" data-id="ck7vvmak90002dkuj0j3ch1m5" class="article-share-link">Share</a>
+      <a data-url="http://ricado-xv.github.io/2020/03/17/%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%A7%98%E5%AF%86/" data-id="ck7w1u95i00022wuj9i95euwz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -428,7 +422,7 @@ println( s )
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ricado-xv.github.io/2020/03/09/MarkDown%E8%AF%AD%E6%B3%95/" data-id="ck7vvmajp0000dkuj3wh58x1g" class="article-share-link">Share</a>
+      <a data-url="http://ricado-xv.github.io/2020/03/09/MarkDown%E8%AF%AD%E6%B3%95/" data-id="ck7w1u94z00002wuj8k9vesll" class="article-share-link">Share</a>
       
       
     </footer>
@@ -477,7 +471,7 @@ println( s )
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ricado-xv.github.io/2020/03/08/hello-world/" data-id="ck7vvmajw0001dkujc69d9mbg" class="article-share-link">Share</a>
+      <a data-url="http://ricado-xv.github.io/2020/03/08/hello-world/" data-id="ck7w1u95400012wujbqxld0y9" class="article-share-link">Share</a>
       
       
     </footer>
