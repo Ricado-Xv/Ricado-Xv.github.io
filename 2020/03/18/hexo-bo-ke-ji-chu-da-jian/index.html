@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Richardo-Xv-Blog">
+    <meta name="keywords" content="hexo博客基础搭建, Richardo-Xv-Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Richardo-Xv-Blog</title>
+    <title>hexo博客基础搭建 | Richardo-Xv-Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">hexo博客基础搭建</h1>
                 </div>
             </div>
         </div>
@@ -426,9 +426,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">-hexo</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -440,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-08
+                    2020-03-18
                 </div>
                 
 
@@ -449,7 +453,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    125
+                    1.3k
                 </div>
                 
 
@@ -462,19 +466,70 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="hexo基础搭建步骤"><a href="#hexo基础搭建步骤" class="headerlink" title="hexo基础搭建步骤"></a>hexo基础搭建步骤</h1><p>###首先说说为啥用hexo:</p>
+<p><strong>1.免费,没广告</strong></p>
+<p><strong>2.CSS和html可以自己写,也可以直接用模板,美观,难度适中,适合练手</strong></p>
+<p><strong>3.没有平台审核,方便,自由</strong></p>
+<h2 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1.安装Git"></a>1.安装Git</h2><h2 id="2-安装Node-js"><a href="#2-安装Node-js" class="headerlink" title="2.安装Node.js"></a>2.安装Node.js</h2><h2 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h2><h2 id="4-Github创建个人仓库"><a href="#4-Github创建个人仓库" class="headerlink" title="4.Github创建个人仓库"></a>4.Github创建个人仓库</h2><h2 id="5-生成SSH添加到Github"><a href="#5-生成SSH添加到Github" class="headerlink" title="5.生成SSH添加到Github"></a>5.生成SSH添加到Github</h2><h2 id="6-将hexo上传到github"><a href="#6-将hexo上传到github" class="headerlink" title="6.将hexo上传到github"></a>6.将hexo上传到github</h2><h2 id="7-发布文章"><a href="#7-发布文章" class="headerlink" title="7.发布文章"></a>7.发布文章</h2><h4 id="以下的安装包都需要科学上网-否则极慢-或者用国内的镜像也可-百度一下-阿里镜像"><a href="#以下的安装包都需要科学上网-否则极慢-或者用国内的镜像也可-百度一下-阿里镜像" class="headerlink" title="(以下的安装包都需要科学上网,否则极慢,或者用国内的镜像也可(百度一下:阿里镜像))"></a>(以下的安装包都需要科学上网,否则极慢,或者用国内的镜像也可(百度一下:<font color="green">阿里镜像</font>))</h4><hr>
+<h2 id="1-安装Git-1"><a href="#1-安装Git-1" class="headerlink" title="1.安装Git"></a>1.安装Git</h2><p><strong>廖雪峰老师的Git教程写的非常好，大家可以看一下。<a href="https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496" target="_blank" rel="noopener">Git教程</a></strong></p>
+<p>  windows：到git官网上下载.exe文件,Download git,安装选项还是全部默认，只不过最后一步添加路径时选择<strong>*Use Git from the Windows Command Prompt</strong>，这样我们就可以直接在命令提示符里打开git了。<br>  安装完后,记得在命令提示符输入 <strong>*git –version</strong>查看是否安装成功</p>
+<hr>
+<h2 id="2-安装node-js"><a href="#2-安装node-js" class="headerlink" title="2.安装node.js"></a>2.安装node.js</h2><p>  hexo是基于node.js编写的,需要安装node.js和npm工具<br>  windows：下载稳定版或者最新版都可以,进官网:<strong><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Node.js</a></strong>，安装选项全部默认，一路点击Next。<br>最后安装好之后，按Win+R打开命令提示符，输入:</p>
+<pre><code>node -v
+npm -v，</code></pre><p>如果出现版本号，那么就安装成功了。</p>
+<p>(<a href="https://registry.npm.taobao.org1" target="_blank" rel="noopener">阿里镜像加速node.js下载</a>)</p>
+<p><strong>或者右击任意地方,点击gitBush</strong>,在命令行输入:</p>
+<pre><code>npm config set registry https://registry.npm.taobao.org1</code></pre><hr>
+<h2 id="3-安装Hexo-1"><a href="#3-安装Hexo-1" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h2><p>  <strong>先创建一个文件夹MyBlog</strong>,用来存放博客文件,然后cd到这个文件夹下(或者在这个文件夹下右击,点击 git bash即可)<br>  输入下面的命令安装Hexo</p>
+<pre><code>npm install -g hexo-cli</code></pre><p>  安装完输入</p>
+<pre><code>hexo -v</code></pre><p>验证是否安装成功.</p>
+<p>需要安装的东西安完了,</p>
+<p><strong>接下来初始化hexo</strong><br>输入</p>
+<pre><code>hexo init MyBlog(你的文件夹是啥就写啥)</code></pre><p>接着进入这个文件夹(cd或者直接在文件夹里GitBush here都可)<br>输入 </p>
+<pre><code>npm install</code></pre><p>新建完成后，指定文件夹MyBlog目录下有：</p>
+<ul>
+<li>node_modules: 依赖包</li>
+<li>public：存放生成的页面</li>
+<li>scaffolds：生成文章的一些模板</li>
+<li>source：用来存放你的文章</li>
+<li>themes：主题** </li>
+<li>_config.yml: 博客的配置文件**</li>
+</ul>
+<p>然后输入 </p>
+<pre><code>hexo generate(简写g)</code></pre><p>再输入 </p>
+<pre><code>hexo server(简写s)</code></pre><p>就可以再本地浏览网页了</p>
+<p>在浏览器输入: <a href="http://localhost4000/" target="_blank" rel="noopener">http://localhost4000/</a></p>
+<p>到这里,初始化完成,建议停一下  认真浏览一下这个初始化的页面,下面的介绍都是官方文档,详细介绍了hexo的操作方法,还有基本参数之类的<br>或者访问<strong><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo官网</a></strong>(中文的哟)</p>
+<p>By the way,安装教程就在官网里,甚至国内镜像也有,觉得我写的不详细的话可以直接在官网看.</p>
+<hr>
+<h2 id="4-注册Github账号创建个人仓库"><a href="#4-注册Github账号创建个人仓库" class="headerlink" title="4.注册Github账号创建个人仓库"></a>4.注册Github账号创建个人仓库</h2><p>记得选上<strong>Initialize this repository wiyh a README</strong></p>
+<hr>
+<h2 id="5-生成SSH添加到Github-1"><a href="#5-生成SSH添加到Github-1" class="headerlink" title="5.生成SSH添加到Github"></a>5.生成SSH添加到Github</h2><p>在桌面右击打开 git bush 输入以下命令:</p>
+<pre><code>git config --global user.name "yourname"
+git config --global user.email "youremail"</code></pre><p><strong>yourname输入Github用户名,youremail输入Github邮箱</strong></p>
+<p>可以输入以下命令检查有没有输对</p>
+<pre><code>git config user.name
+git config user.email</code></pre><p>然后输入下面的代码,创建SSH密钥,一路回车(有个步骤是要设置密码,但是没啥用,回车跳过就行)</p>
+<pre><code>ssh-keygen -t rsa -C "youremail"</code></pre><p>然后接着输入</p>
+<pre><code>cat ~/.ssh/id_rsa.pub</code></pre><p><strong>输出的内容就是SSH密钥的公钥</strong>,复制一下</p>
+<p>打开<strong><a href="http://github.com" target="_blank" rel="noopener">github</a></strong>，在头像下面点击<strong>settings</strong>，再点击<strong>SSH and GPG keys</strong>，新建一个SSH，名字随便取一个都可以，把你的<strong>id_rsa.pub里面的信息复制进去(就是刚才复制粘贴的公钥)</strong>。</p>
+<p>最后在git bash输入</p>
+<pre><code>ssh-T git@github.com</code></pre><p>如果没有报错,连接就建立成功了<strong>(你就可以远程控制访问github代码仓库了)</strong></p>
+<hr>
+<h2 id="6-将hexo上传到github-1"><a href="#6-将hexo上传到github-1" class="headerlink" title="6.将hexo上传到github"></a>6.将hexo上传到github</h2><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，<strong>打开博客根目录下的_config.yml文件</strong>，这是博客的配置文件，在这里你可以修改与博客配置相关的各种信息。<br><strong>修改配置:</strong></p>
+<pre><code>deploy:
+  type: git
+  repository: https://github.com/shw2018/shw2018.github.io
+  branch: master</code></pre><p>  repository填自己的github项目地址</p>
+<p>然后在博客目录下,安装deploy-git,这样才能同步到github的远程仓库上<br>输入: </p>
+<pre><code>npm install hexo-deployer-git --save</code></pre><p>最后输入: </p>
+<pre><code>hexo clean //(清理public文件) 
+hexo generate //(生成静态页面)
+hexo deploy //(上传到github)</code></pre><p>到这里,hexo基本搭建就完成了</p>
+<hr>
+<h2 id="7-发表博客"><a href="#7-发表博客" class="headerlink" title="7.发表博客"></a>7.发表博客</h2><p>在博客根目录下的source文件夹创建.md后缀的文件,windows建议下载一个<a href="http://markdownpad.com/" target="_blank" rel="noopener">MarkDownPad</a>,用MarkdownPad写博客内容即可.</p>
+<p><a href="https://ricado-xv.github.io/2020/03/09/markdown-yu-fa/">Markdown简明语法</a></p>
+<h1 id="超级感谢参考博客-洪卫の博客"><a href="#超级感谢参考博客-洪卫の博客" class="headerlink" title="超级感谢参考博客:洪卫の博客"></a>超级感谢参考博客:<a href="https://sunhwee.com/posts/6e8839eb.html#toc-heading-4" target="_blank" rel="noopener">洪卫の博客</a></h1><h1 id="廖雪峰老师的Git教程写的非常好，大家可以看一下。Git教程"><a href="#廖雪峰老师的Git教程写的非常好，大家可以看一下。Git教程" class="headerlink" title="廖雪峰老师的Git教程写的非常好，大家可以看一下。Git教程"></a>廖雪峰老师的Git教程写的非常好，大家可以看一下。<a href="https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496" target="_blank" rel="noopener">Git教程</a></h1><p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -518,7 +573,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Ricado-Xv.github.io/2020/03/08/hello-world/">http://Ricado-Xv.github.io/2020/03/08/hello-world/</a>
+                    <a href="http://Ricado-Xv.github.io/2020/03/18/hexo-bo-ke-ji-chu-da-jian/">http://Ricado-Xv.github.io/2020/03/18/hexo-bo-ke-ji-chu-da-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -555,7 +610,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">-hexo</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -719,78 +778,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/09/markdown-yu-fa/">
+                <a href="/2020/03/18/hexo-bo-ke-ji-chu-da-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="MarkDown简明语法">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="hexo博客基础搭建">
                         
-                        <span class="card-title">MarkDown简明语法</span>
+                        <span class="card-title">hexo博客基础搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            hexo blog搭建教程(clik here)一个人来到田纳西
-毫无疑问
-*我做的馅饼 
-是全天下*
-最好吃的
-
-
-引用
-
-引用中的引用
-
-
-
-大标题小标题#一级标题##二级标题###三级标题####四级标题#####五级标题######
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-09
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Richardo-Xv
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/08/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            hexo基础搭建步骤###首先说说为啥用hexo:
+1.免费,没广告
+2.CSS和html可以自己写,也可以直接用模板,美观,难度适中,适合练手
+3.没有平台审核,方便,自由
+1.安装Git2.安装Node.js3.安装Hexo4.Gith
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
                             </span>
                         <span class="publish-author">
                             
@@ -801,6 +815,54 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">-hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/17/mei-ju-lei-xing-de-mi-mi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="枚举类型的秘密">
+                        
+                        <span class="card-title">枚举类型的秘密</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            枚举类型的好处
+1.约束性好,减少错误:以B站上传视频为例,视频一般有三个状态:草稿,审核,发布.可以定义位静态常量:不用枚举类型:  public class VideoStatus{
+
+  public static final int
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Richardo-Xv
+                            
+                        </span>
+                    </div>
+                </div>
                 
             </div>
         </div>
