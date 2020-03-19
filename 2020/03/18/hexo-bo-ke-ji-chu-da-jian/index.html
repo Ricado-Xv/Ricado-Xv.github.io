@@ -778,34 +778,38 @@ hexo deploy //(上传到github)</code></pre><p>到这里,hexo基本搭建就完�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/18/hexo-bo-ke-ji-chu-da-jian/">
+                <a href="/2020/03/19/markdown-yu-fa-shu-xue-gong-shi-pian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="hexo博客基础搭建">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Markdown语法补充-数学公式篇">
                         
-                        <span class="card-title">hexo博客基础搭建</span>
+                        <span class="card-title">Markdown语法补充-数学公式篇</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            hexo基础搭建步骤###首先说说为啥用hexo:
-1.免费,没广告
-2.CSS和html可以自己写,也可以直接用模板,美观,难度适中,适合练手
-3.没有平台审核,方便,自由
-1.安装Git2.安装Node.js3.安装Hexo4.Gith
+                            Markdown语法补充-数学公式篇
+高亮代码块1int a=0;
+正文中的代码
+
+正文的代码:int a=0
+
+插入数学公式
+
+在文档开头加上下面的javascript代码即可
+type1src="http://cdn.mathjax.o
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-19
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -814,12 +818,11 @@ hexo deploy //(上传到github)</code></pre><p>到这里,hexo基本搭建就完�
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">-hexo</span>
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">-Markdown</span>
                     </a>
                     
                 </div>
@@ -873,6 +876,43 @@ hexo deploy //(上传到github)</code></pre><p>到这里,hexo基本搭建就完�
 </div>
 
 
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Richardo-Xv-Blog<br />'
+            + '文章作者: Richardo-Xv<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
 
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
@@ -893,10 +933,6 @@ hexo deploy //(上传到github)</code></pre><p>到这里,hexo基本搭建就完�
 
 
 <!-- 代码块折行 -->
-
-<style type="text/css">
-code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
-</style>
 
 
     </div>
@@ -1011,7 +1047,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.9k</span>&nbsp;字
+                class="white-color">3.9k</span>&nbsp;字
             
             
             

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="枚举类型的秘密, Richardo-Xv-Blog">
+    <meta name="keywords" content="Markdown语法补充-数学公式篇, Richardo-Xv-Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>枚举类型的秘密 | Richardo-Xv-Blog</title>
+    <title>Markdown语法补充-数学公式篇 | Richardo-Xv-Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">枚举类型的秘密</h1>
+                    <h1 class="description center-align post-title">Markdown语法补充-数学公式篇</h1>
                 </div>
             </div>
         </div>
@@ -426,9 +426,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">-Markdown</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -440,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-17
+                    2020-03-19
                 </div>
                 
 
@@ -449,7 +453,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    952
                 </div>
                 
 
@@ -462,231 +466,123 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="枚举类型的好处"><a href="#枚举类型的好处" class="headerlink" title="枚举类型的好处"></a>枚举类型的好处</h1><hr>
-<h3 id="1-约束性好-减少错误"><a href="#1-约束性好-减少错误" class="headerlink" title="1.约束性好,减少错误:"></a>1.约束性好,减少错误:</h3><h3 id="以B站上传视频为例-视频一般有三个状态-草稿-审核-发布-可以定义位静态常量"><a href="#以B站上传视频为例-视频一般有三个状态-草稿-审核-发布-可以定义位静态常量" class="headerlink" title="以B站上传视频为例,视频一般有三个状态:草稿,审核,发布.可以定义位静态常量:"></a>以B站上传视频为例,视频一般有三个状态:草稿,审核,发布.可以定义位静态常量:</h3><h5 id="不用枚举类型"><a href="#不用枚举类型" class="headerlink" title="不用枚举类型:"></a>不用枚举类型:</h5><pre><code>  public class VideoStatus{
-
-  public static final int Draft=1;//草稿
-
-  public static final int Review=2;//审核
-
-  public static final int Published=3;//发表
-
-}
-
- void judgeVideoStatus(int status){//判断状态的函数,由于没  有类型上的约束,任意一个int值都可以,不会报错
-  ...
-}</code></pre><h5 id="用枚举类型"><a href="#用枚举类型" class="headerlink" title="用枚举类型:"></a>用枚举类型:</h5><pre><code>public enum VideoStatus{
-  Draft,Review,Published
-}
-
-void judgeVideoStatus(VideoStatus status){//这里传入参数的约束很明确,不容易出错
-  ...
-}</code></pre><hr>
-<h3 id="2-枚举类型通常的方法"><a href="#2-枚举类型通常的方法" class="headerlink" title="2.枚举类型通常的方法:"></a>2.枚举类型通常的方法:</h3><h5 id="以后台管理系统为例-角色一般是固定的-有系统管理员-订单管理员-普通用户"><a href="#以后台管理系统为例-角色一般是固定的-有系统管理员-订单管理员-普通用户" class="headerlink" title="以后台管理系统为例,角色一般是固定的,有系统管理员,订单管理员,普通用户."></a>以后台管理系统为例,角色一般是固定的,有系统管理员,订单管理员,普通用户.</h5><pre><code>public enum UserRole{
-
-  ROLE_ROOT_ADMIN,//系统管理员
-
-  ROLE_ORDER_ADMIN,//订单管理员
-
-  ROLE_NORMAL //普通用户
-}
+                <h3 id="Markdown语法补充-数学公式篇"><a href="#Markdown语法补充-数学公式篇" class="headerlink" title="Markdown语法补充-数学公式篇"></a>Markdown语法补充-数学公式篇</h3><ol>
+<li><strong>高亮代码块</strong><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">0</span>;</span><br></pre></td></tr></tbody></table></figure></li>
+<li><strong>正文中的代码</strong></li>
+</ol>
+<p>正文的代码:<code>int a=0</code></p>
+<ol start="3">
+<li><strong>插入数学公式</strong></li>
+</ol>
+<p>在文档开头加上下面的javascript代码即可</p>
+<figure class="highlight plain"><figcaption><span>type</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 
-UserRole role1=UserRole.ROLE_ROOT_ADMIN;
-UserRole role2=UserRole.ROLE_ORDER_ADMIN;
-UserRole role3=UserRole.ROLE_NORMAL;
+<p>效果如下:</p>
+<p>When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are<br>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
+<p>mathjax代码如下:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are</span><br><span class="line">$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</span><br></pre></td></tr></tbody></table></figure>
+<p>可以点击<a href="https://www.mathjax.org/" target="_blank" rel="noopener">mathjax官网</a>自己学习</p>
+<h3 id="下面是Mathjax的简明语法"><a href="#下面是Mathjax的简明语法" class="headerlink" title="下面是Mathjax的简明语法:"></a>下面是Mathjax的简明语法:</h3><p>(frac:分数,sum:求和,)</p>
+<ol>
+<li>$\sum_{i=0}^n i^2 = \frac{(n^2 + n)(2n+1)}{6}$</li>
+</ol>
+<p><strong>代码</strong></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\sum_{i=0}^n i^2 = \frac{(n^2 + n)(2n+1)}{6}$</span><br></pre></td></tr></tbody></table></figure>
+<ol start="2">
+<li>$$\sum_{i=0}^n i2=\frac{(n2+n)(2n+1)}{6}$$</li>
+</ol>
+<p><strong>代码</strong></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\sum_{i=0}^n i2=\frac{(n2+n)(2n+1)}{6}$$</span><br></pre></td></tr></tbody></table></figure>
 
-for(UserRole role : UserRole.values() ){
-  System.out.printIn(role);//打印出各个role的值
-}
+<ol start="3">
+<li>希腊字母</li>
+</ol>
+<p>\alpha: $\alpha$ ,  \Alpha: $\Alpha$</p>
+<p>\beta: $\beta$, \Beta: $Beta$</p>
+<p>\omega: $\omega$ , \Omega: $\Omega$</p>
+<p>\gamma: $\gamma$, \Gamma: $\Gamma$</p>
+<p>\delta: $\delta$, \Delta: $\Delta$</p>
+<p>\theta $\theta$, \Theta: $\Theta$</p>
+<p><strong>代码</strong></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\alpha: $\alpha$ ,  \Alpha: $\Alpha$</span><br><span class="line"></span><br><span class="line">\beta: $\beta$, \Beta: $Beta$</span><br><span class="line"></span><br><span class="line">\omega: $\omega$ , \Omega: $\Omega$</span><br><span class="line"></span><br><span class="line">\gamma: $\gamma$, \Gamma: $\Gamma$</span><br><span class="line"></span><br><span class="line">\delta: $\delta$, \Delta: $\Delta$</span><br></pre></td></tr></tbody></table></figure>
+<ol start="4">
+<li><p>上下角标</p>
+<p>$i^2$  $x_i$ $x_i^2$ $cos\theta^2$ $sin^2\theta$</p>
+</li>
+</ol>
+<p><strong>代码</strong></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$i^2$  $x_i$ $x_i^2$ $cos\theta^2$ $sin^2\theta$</span><br></pre></td></tr></tbody></table></figure>
 
-//ordinal()方法: 返回枚举常量的序数,注意从0开始
-System.out.printIn(role1.ordinal() );//打印出数组编号,这个是0
-System.out.printIn(role2.ordinal() );//打印出数组编号,这个是1
-System.out.printIn(role3.ordinal() );//打印出数组编号,这个是2   
+<ol start="5">
+<li><p>上下标组合</p>
+<p>$6^{66}$ $x^{y^2}$</p>
+</li>
+</ol>
+<p><strong>代码</strong></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$6^{66}$ $x^{y^2}$</span><br></pre></td></tr></tbody></table></figure>
+<ol start="6">
+<li>括号</li>
+</ol>
+<p>$\frac{(x+y)}{[\alpha+\beta]}$</p>
+<p><strong>代码</strong></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\frac{(x+y)}{[\alpha+\beta]}$</span><br></pre></td></tr></tbody></table></figure>
 
-//compareTo()方法: 枚举常量顺序的比较
-System.out.printIn(role1.compareTo(role2) );//打印-1
-System.out.printIn(role2.compareTo(role3) );//打印-1
-System.out.printIn(role1.compareTo(role3) );//打印-2
+<ol start="7">
+<li>求积分</li>
+</ol>
+<p>$\int$ $\iint$</p>
+<p>$\int_{i=0}^n$</p>
+<p>$\iint_Df(x,y)d\delta$=$\lim_{x\to\i} \sum_{i=0}^nf(a_i,b_i)\Delta\delta$</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$\int$ $\iint$</span><br><span class="line"></span><br><span class="line">$\int_{i=0}^n$</span><br><span class="line"></span><br><span class="line">$\iint_Df(x,y)d\delta$=$\lim_{x\to\\i} \sum_{i=0}^nf(a_i,b_i)\Delta\delta$</span><br></pre></td></tr></tbody></table></figure>
 
-//name()方法: 获取枚举常量的名称
-System.out.printIn(role1.name() );//打印ROLE_ROOT_ADMIN
-System.out.printIn(role2.name() );//打印ROLE_ORDER_ADMIN
-System.out.printIn(role3.name() );//打印ROLE_NORMAL
+<ol start="8">
+<li>连乘</li>
+</ol>
+<p>$\prod$   $\prod_{0}^2$</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\prod$   $\prod_{0}^2$</span><br></pre></td></tr></tbody></table></figure>
 
-//valueOf()方法: 返回指定名称的枚举常量
-System.out.printIn(UserRole.valueOf("ROLE_ROOT_ADMIN") );//打印role1
-System.out.printIn(UserRole.valueOf("ROLE_ORDER_ADMIN") );//打印role2
-System.out.printIn(UserRole.valueOf("ROLE_NORMAL") );//打印role3</code></pre><h5 id="除此之外-枚举还可用于switch语句里"><a href="#除此之外-枚举还可用于switch语句里" class="headerlink" title="除此之外,枚举还可用于switch语句里"></a>除此之外,枚举还可用于switch语句里</h5><pre><code>switch(userRole){
-  case ROLE_NORMAL:
-     ...
-     break;
-  case ROLE_ORDER_ADMIN:
-     ...
-     break;
-  case ROLE_ROOT_ADMIN:
-     ...
-     break;
-}</code></pre><hr>
-<h3 id="3-枚举类型的拓展性"><a href="#3-枚举类型的拓展性" class="headerlink" title="3.枚举类型的拓展性:"></a>3.枚举类型的拓展性:</h3><h5 id="例如在枚举里加入角色名-编码的对应关系-并且自定义一些属性-构造函数-甚至各种方法-和class一样"><a href="#例如在枚举里加入角色名-编码的对应关系-并且自定义一些属性-构造函数-甚至各种方法-和class一样" class="headerlink" title="例如在枚举里加入角色名-编码的对应关系,并且自定义一些属性,构造函数,甚至各种方法.和class一样."></a>例如在枚举里加入角色名-编码的对应关系,并且自定义一些属性,构造函数,甚至各种方法.和class一样.</h5><pre><code>  public enum UserRole{
+<ol start="9">
+<li>分数</li>
+</ol>
+<p>$\frac1 3$  $\frac{x+y}{a+b}$ $a\over b$</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\frac1 3$  $\frac{x+y}{a+b}$ $a\over b$</span><br></pre></td></tr></tbody></table></figure>
 
-  ROLE_ROOT_ADMIN( "系统管理员",000000),
-  ROLE_ORDER_ADMIN( "订单管理员",100000),
-  ROLE_NORMAL("普通用户",200000),
-  ;
+<ol start="10">
+<li>开根号</li>
+</ol>
+<p>$\sqrt{x+y}$</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\sqrt{x+y}$</span><br></pre></td></tr></tbody></table></figure>
 
-  //自定义属性
-  private final String roleName;//角色名称
-  private final Integer roleCode;//角色编码
+<ol start="11">
+<li>极限</li>
+</ol>
+<p>$\lim_{x\to\infty}$</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\lim_{x\to\infty}$</span><br></pre></td></tr></tbody></table></figure>
 
-  //自定义构造函数
-  UserRole( String roleName,Integer roleCode){
-     this.roleName=roleName;
-     this.roleCode=roleCode;
-  }
+<ol start="12">
+<li>空格</li>
+</ol>
+<p>$a\ b$</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$a\ b$</span><br></pre></td></tr></tbody></table></figure>
 
-  //自定义方法
-  public String getRoleName(){
-     return this.roleName;
-  }
-  public Integer getRoleCode(){
-     return this.roleCode;
-  }
+<ol start="13">
+<li>矩阵</li>
+</ol>
+<p>$\begin{matrix} 1&amp;x&amp;x^2\ 1&amp;y&amp;y^2\ 1&amp;z&amp;z^2 \end{matrix}$<br>$\begin{pmatrix} 1&amp;x&amp;x^2\ 1&amp;y&amp;y^2\ 1&amp;z&amp;z^2 \end{pmatrix}$<br>$\begin{bmatrix} 1&amp;x&amp;x^2\ 1&amp;y&amp;y^2\ 1&amp;z&amp;z^2 \end{bmatrix}$<br>$\begin{Bmatrix} 1&amp;x&amp;x^2\ 1&amp;y&amp;y^2\ 1&amp;z&amp;z^2 \end{Bmatrix}$<br>$\begin{vmatrix} 1&amp;x&amp;x^2\ 1&amp;y&amp;y^2\ 1&amp;z&amp;z^2 \end{vmatrix}$<br>$\left[ \begin{array}{cc|c} 1&amp;2&amp;3\\ 2&amp;3&amp;4 \end{array} \right]$<br>$\left[ \begin{array}{c|cc} 1&amp;2&amp;3\\ 2&amp;3&amp;4 \end{array} \right]$</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$\begin{matrix} 1&amp;x&amp;x^2\\ 1&amp;y&amp;y^2\\ 1&amp;z&amp;z^2 \end{matrix}$</span><br><span class="line">$\begin{pmatrix} 1&amp;x&amp;x^2\\ 1&amp;y&amp;y^2\\ 1&amp;z&amp;z^2 \end{pmatrix}$</span><br><span class="line">$\begin{bmatrix} 1&amp;x&amp;x^2\\ 1&amp;y&amp;y^2\\ 1&amp;z&amp;z^2 \end{bmatrix}$</span><br><span class="line">$\begin{Bmatrix} 1&amp;x&amp;x^2\\ 1&amp;y&amp;y^2\\ 1&amp;z&amp;z^2 \end{Bmatrix}$</span><br><span class="line">$\begin{vmatrix} 1&amp;x&amp;x^2\\ 1&amp;y&amp;y^2\\ 1&amp;z&amp;z^2 \end{vmatrix}$</span><br><span class="line">$\left[ \begin{array}{cc|c} 1&amp;2&amp;3\\\ 2&amp;3&amp;4 \end{array} \right]$</span><br><span class="line">$\left[ \begin{array}{c|cc} 1&amp;2&amp;3\\\ 2&amp;3&amp;4 \end{array} \right]$</span><br></pre></td></tr></tbody></table></figure>
 
-  public static Integer getRoleCodebyRoleName( String roleName){
-     for(UserRole enums: UserRole.values()){
-        if(enums.getRoleName.equals(roleName)){
-           return enums.getRoleCode;
-        }
-     }
-     return null;
-  }
-}</code></pre><hr>
-<h3 id="4-枚举-接口"><a href="#4-枚举-接口" class="headerlink" title="4.枚举+接口:"></a>4.枚举+接口:</h3><h5 id="可以消灭if-else-增强代码的可读性"><a href="#可以消灭if-else-增强代码的可读性" class="headerlink" title="可以消灭if/else,增强代码的可读性"></a>可以消灭if/else,增强代码的可读性</h5><pre><code>//定义一个公用接口RoleOperation,表示不同角色的操作
-public interface RoleOperation{
-  String op();//表示某个角色可以做哪些op操作
-}
+<ol start="14">
+<li>分段函数<br>$$f(n)=\begin{cases}n/2,&amp;\text{if $n$ is even}\3n+1,&amp;\text{if $n$ is odd}\end{cases}$$</li>
+</ol>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$f(n)=\begin{cases}n/2,&amp;\text{if $n$ is even}\\3n+1,&amp;\text{if $n$ is odd}\end{cases}$$</span><br></pre></td></tr></tbody></table></figure>
 
-//下面定义一个枚举类RoleEnum,用它实现RoleOperation接口
-public enum RoleEnum implements RoleOperation{
-
-  //系统管理员有A权限
-  ROLE_ROOT_ADMIN{
-     @override
-     public String op(){
-        return "ROLE_ROOT_ADMIN"+"has A permission";
-     }
-  },
-
-  //订单管理员有B权限
-  ROLE_ORDER_ADMIN{
-     @override
-     public String op(){
-        return "ROLE_ORDER_ADMIN"+"has B permission";
-     }
-  },
-
-  //普通用户有C权限
-  ROLE_NORMAL{
-     @override
-     public String op(){
-        return "ROLE_NORMAL"+"has C permission";
-     }
-  };
-}
-
-public class JudgeRole{
-  public String judge(String roleName){
-     return RoleEnum.valueOf(roleName).op();
-  }
-}</code></pre><hr>
-<h3 id="5-枚举与设计模式"><a href="#5-枚举与设计模式" class="headerlink" title="5. 枚举与设计模式"></a>5. 枚举与设计模式</h3><h5 id="①-单例模式"><a href="#①-单例模式" class="headerlink" title="① 单例模式"></a>① 单例模式</h5><pre><code>public class Singleton{
-  //构造函数私有化,避免外部创建实例
-  private Singleton(){
-
-  }
-
-  //定义一个内部枚举
-  public enum SingletonEnum{
-
-     SEED;//唯一一个枚举对象
-
-     private Singleton singleton;
-
-     SingletonEnum(){
-        singleton=new Singleton();//这里才是真正的对象,实例化了
-     }
-
-     public Singleton getInstnce(){
-        return singleton;
-     }
-  }
-
-  //外漏对象的获取方法,这是外面获取实例的唯一入口
-  public static Singleton getInstnce(){
-     return SingletonEnum.SEED.getInstnce();//通过唯一的枚举对象完成
-  }</code></pre><p>   }</p>
-<h5 id="②策略模式"><a href="#②策略模式" class="headerlink" title="②策略模式"></a>②策略模式</h5><h5 id="这里举例写一个加减乘除计算器"><a href="#这里举例写一个加减乘除计算器" class="headerlink" title="这里举例写一个加减乘除计算器"></a>这里举例写一个加减乘除计算器</h5><pre><code>public class Test{
-
-  public enum Calculator{
-
-     ADDITION{//加法
-        public Double execute(Double x,Double y){
-           return x+y;
-        }
-     },
-
-     SUBTRACTION{//减法
-        public Double execute(Double x,Double y){
-           return x-y;
-        }
-     },
-
-     MULTIPLICATION{//乘法
-        public Double execute(Double x,Double y){
-           return x*y;
-        }
-     },
-
-     DIVISION{//除法
-        public Double execute(Double x,Double y){
-           return x/y;
-        }
-     };
-
-     public abstract Double execute(Double x,Double y);//抽象方法,可以避免产生这个抽象类的实例化对象
-  }
-
-  public static void main(String[] args){
-     System.out.printIn(Calculator.ADDITION.execute(4.0,2.0));//打印6.0
-  }</code></pre><p>   }</p>
-<hr>
-<h3 id="6-专用于枚举的集合类"><a href="#6-专用于枚举的集合类" class="headerlink" title="6.专用于枚举的集合类"></a>6.专用于枚举的集合类</h3><h5 id="对应于HashMap和HashSet-枚举有专门的集合类-EnumSet和EnumMap"><a href="#对应于HashMap和HashSet-枚举有专门的集合类-EnumSet和EnumMap" class="headerlink" title="对应于HashMap和HashSet,枚举有专门的集合类:EnumSet和EnumMap"></a>对应于HashMap和HashSet,枚举有专门的集合类:EnumSet和EnumMap</h5><h5 id="以开头的枚举类型为例"><a href="#以开头的枚举类型为例" class="headerlink" title="以开头的枚举类型为例:"></a>以开头的枚举类型为例:</h5><pre><code>public enum UserRole{
-   ROLE_NORMAL,ROLE_ORDER_ADMIN,ROLE_ROOT_ADMIN
-}</code></pre><h5 id="①EnumSet"><a href="#①EnumSet" class="headerlink" title="①EnumSet"></a>①EnumSet</h5><h5 id="比如系统里来了一批人-查看他是不是枚举类型里的某个角色"><a href="#比如系统里来了一批人-查看他是不是枚举类型里的某个角色" class="headerlink" title="比如系统里来了一批人,查看他是不是枚举类型里的某个角色"></a>比如系统里来了一批人,查看他是不是枚举类型里的某个角色</h5><pre><code>//定义一个管理员角色的专属集合
-EnumSet&lt;UserRole&gt; userRoleForAdmin
-  =EnumSet.of(
-     UserRole.ROLE_ORDER_ADMIN,
-     UserRole.ROLE_ROOT_ADMIN
-  );
-//判断某个进来的用户是不是管理员
-Boolean isAdmin(User user){
-  if( userRoles.contains(user.getUserRole()))//java.lang.String里的函数,返回主体是否包含了括号里的参数
-  /*String s='It's great to see you here.'   Boolean c=s.contains(".")*/
-     return true;
-
-  return false; 
-}</code></pre><h5 id="②EnumMap"><a href="#②EnumMap" class="headerlink" title="②EnumMap"></a>②EnumMap</h5><h5 id="EnumMap用来存放枚举类型为key的Map类型"><a href="#EnumMap用来存放枚举类型为key的Map类型" class="headerlink" title="EnumMap用来存放枚举类型为key的Map类型"></a>EnumMap用来存放枚举类型为key的Map类型</h5><h5 id="比如-系统里来了一批人-我们统计不同的角色到底有多少人"><a href="#比如-系统里来了一批人-我们统计不同的角色到底有多少人" class="headerlink" title="比如,系统里来了一批人,我们统计不同的角色到底有多少人:"></a>比如,系统里来了一批人,我们统计不同的角色到底有多少人:</h5><pre><code>Map&lt;UserRole,Integer&gt; userStatisticMap=new EnumMap&lt;&gt;(UserRole.class);
-
-for(User user : userList){
-  Integer num=userStatisticMap.get(user.getUserRole() );
-  if(null!=num){
-     userStatisticMap.put(user.getUserRole(),num+1);
-  }else{
-     userStatisticMap.put(user.getUserRole(),1);
-  }
-}</code></pre><h1 id="感谢微信公众号CodeSheep"><a href="#感谢微信公众号CodeSheep" class="headerlink" title="感谢微信公众号CodeSheep"></a>感谢微信公众号CodeSheep</h1><script>
+<ol start="15">
+<li>数组和表格<br>$$\begin{array}{cc|c} x_1+1^2&amp;2+x_1^3&amp;3x_1^2+1\\ 4 &amp; 5&amp; 6 \end{array}$$</li>
+</ol>
+<p>$$\begin{array}{c|cc} index&amp;Left&amp;Center&amp;Right\ \hline 1 &amp; 5&amp; 6&amp; 7 \ \hline 2    &amp; 8&amp;    9&amp;    10 \end{array}$$</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$$\begin{array}{cc|c} x_1+1^2&amp;2+x_1^3&amp;3x_1^2+1\\\ 4 &amp; 5&amp; 6 \end{array}$$</span><br><span class="line"></span><br><span class="line">$$\begin{array}{c|cc} index&amp;Left&amp;Center&amp;Right\\ \hline 1 &amp; 5&amp; 6&amp; 7 \\ \hline 2	&amp; 8&amp;	9&amp;	10 \end{array}$$</span><br></pre></td></tr></tbody></table></figure>
+<h1 id="感谢-小豆芽zp-还有-芒果浩明"><a href="#感谢-小豆芽zp-还有-芒果浩明" class="headerlink" title="感谢:小豆芽zp 还有 芒果浩明"></a>感谢:<a href="https://blog.csdn.net/u012302219/article/details/51452649" target="_blank" rel="noopener">小豆芽zp</a> 还有 <a href="https://www.jianshu.com/p/12c9926ffb69" target="_blank" rel="noopener">芒果浩明</a></h1><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -729,7 +625,7 @@ for(User user : userList){
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Ricado-Xv.github.io/2020/03/17/mei-ju-lei-xing-de-mi-mi/">http://Ricado-Xv.github.io/2020/03/17/mei-ju-lei-xing-de-mi-mi/</a>
+                    <a href="http://Ricado-Xv.github.io/2020/03/19/markdown-yu-fa-shu-xue-gong-shi-pian/">http://Ricado-Xv.github.io/2020/03/19/markdown-yu-fa-shu-xue-gong-shi-pian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -766,7 +662,11 @@ for(User user : userList){
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">-Markdown</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -930,9 +830,65 @@ for(User user : userList){
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/03/19/markdown-yu-fa-shu-xue-gong-shi-pian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Markdown语法补充-数学公式篇">
+                        
+                        <span class="card-title">Markdown语法补充-数学公式篇</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Markdown语法补充-数学公式篇
+高亮代码块1int a=0;
+正文中的代码
+
+正文的代码:int a=0
+
+插入数学公式
+
+在文档开头加上下面的javascript代码即可
+type1src="http://cdn.mathjax.o
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Richardo-Xv
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">-Markdown</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/03/18/hexo-bo-ke-ji-chu-da-jian/">
                     <div class="card-image">
@@ -954,9 +910,9 @@ for(User user : userList){
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -970,64 +926,6 @@ for(User user : userList){
                     
                     <a href="/tags/hexo/">
                         <span class="chip bg-color">-hexo</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/09/markdown-yu-fa/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="MarkDown简明语法">
-                        
-                        <span class="card-title">MarkDown简明语法</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            hexo blog搭建教程(clik here)一个人来到田纳西
-毫无疑问
-*我做的馅饼 
-是全天下*
-最好吃的
-
-
-引用
-
-引用中的引用
-
-
-
-大标题小标题#一级标题##二级标题###三级标题####四级标题#####五级标题######
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-09
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Richardo-Xv
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">-Markdown</span>
                     </a>
                     
                 </div>
