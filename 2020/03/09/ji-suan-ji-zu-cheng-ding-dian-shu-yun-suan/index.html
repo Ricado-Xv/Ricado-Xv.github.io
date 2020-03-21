@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Richardo-Xv-Blog">
+    <meta name="keywords" content="计算机组成-定点数的加减乘除, Richardo-Xv-Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Richardo-Xv-Blog</title>
+    <title>计算机组成-定点数的加减乘除 | Richardo-Xv-Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">计算机组成-定点数的加减乘除</h1>
                 </div>
             </div>
         </div>
@@ -426,9 +426,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                                <span class="chip bg-color">-计算机组成原理</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -440,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-08
+                    2020-03-09
                 </div>
                 
 
@@ -449,7 +453,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    125
+                    3.3k
                 </div>
                 
 
@@ -462,19 +466,985 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
+                <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">小代码:&lt;table&gt; &lt;tr&gt; &lt;th&gt; &lt;td&gt; </span><br><span class="line">异或: \bigoplus</span><br><span class="line">不等号: \not =</span><br></pre></td></tr></tbody></table></figure>
+<h1 id="一-、定点数加减运算"><a href="#一-、定点数加减运算" class="headerlink" title="一 、定点数加减运算"></a>一 、定点数加减运算</h1><h2 id="1-补码"><a href="#1-补码" class="headerlink" title="1. 补码"></a>1. 补码</h2><h2 id="2-BCD码"><a href="#2-BCD码" class="headerlink" title="2. BCD码"></a>2. BCD码</h2><h2 id="3-移码"><a href="#3-移码" class="headerlink" title="3. 移码"></a>3. 移码</h2><hr>
+<h3 id="1-补码-最常用"><a href="#1-补码-最常用" class="headerlink" title="1. 补码(最常用)"></a>1. 补码(最常用)</h3><ul>
+<li>$[X+Y]_补$=$[X]_补+[Y]_补$</li>
+<li>$[X-Y]_补$=$[X]_补+[-Y]_补$<ul>
+<li>$[-Y]<em>补$=$[[Y]_补]</em>{求补}$</li>
+</ul>
+</li>
+</ul>
+<p><strong>规则:</strong></p>
+<ol>
+<li>所有数用补码表示</li>
+<li>符号位也参加运算</li>
+<li>补充:求补运算简单算法:<ul>
+<li>对于负数:是所有位取反,末位+1.</li>
+<li>对于正数来说,原码就是补码</li>
+</ul>
+</li>
+<li>运算结果也是补码</li>
+</ol>
+<p><strong>问题:</strong> 溢出问题</p>
+<ol>
+<li>异号相加不会溢出</li>
+<li>同号相加才可能溢出</li>
+</ol>
+<p><strong>解决:</strong> 溢出判定</p>
+<p>(我第一次看的时候不知道这有啥用,后来发现,溢出判定实际上是设计数字电路的时候的逻辑)</p>
+<ol>
+<li>双符号位: 00表示正,11表示负: <em>符号位异或,结果是1,则发生了溢出.</em></li>
+<li>进位判决:最高数值位向符号位的进位记为$C_{n-1}$,符号位的进位记为$C_n$.<em>二者异或,结果是1,则发生溢出.</em></li>
+<li>运算符异或进位符:运算结果的符号位结果记为$S_F$,进位标志记为$C_F$,<em>二者异或,结果是1则发生溢出.</em></li>
+<li>根据运算前后的符号位判别.</li>
+</ol>
+<h3 id="2-BCD码-不常用"><a href="#2-BCD码-不常用" class="headerlink" title="2. BCD码(不常用)"></a>2. BCD码(不常用)</h3><p>核心是4位的二进制数是模16运算,BCD码不是.</p>
+<p>以<strong>8421BCD</strong>为例,用<em>4位二进制数</em>,表示<em>1位十进制数</em> .</p>
+<p><strong>矫正:</strong><br>二进制数的结果大于9时,则需要进位,并且-06H作为矫正(因为模16比模10多了6)</p>
+<h3 id="3-移码-和补码差不多"><a href="#3-移码-和补码差不多" class="headerlink" title="3. 移码(和补码差不多)"></a>3. 移码(和补码差不多)</h3><p><strong>规则:</strong></p>
+<ol>
+<li>先对两移码求和差,最后把<strong>结果的符号位取反</strong>作为修正.</li>
+<li>eg: $[57-35]<em>移$=<strong><em>-</em></strong>($[57]_移+[[35]_移]</em>{求补}$)</li>
+</ol>
+<hr>
+<h1 id="二、定点数乘法运算"><a href="#二、定点数乘法运算" class="headerlink" title="二、定点数乘法运算"></a>二、定点数乘法运算</h1><h2 id="1-原码一位"><a href="#1-原码一位" class="headerlink" title="1.原码一位"></a>1.原码一位</h2><h2 id="2-原码二位"><a href="#2-原码二位" class="headerlink" title="2.原码二位"></a>2.原码二位</h2><h2 id="3-补码一位-校正法-amp-Booth法"><a href="#3-补码一位-校正法-amp-Booth法" class="headerlink" title="3.补码一位(校正法&amp;Booth法)"></a>3.补码一位(校正法&amp;Booth法)</h2><h2 id="4-补码二位"><a href="#4-补码二位" class="headerlink" title="4.补码二位"></a>4.补码二位</h2><h3 id="1-原码一位-1"><a href="#1-原码一位-1" class="headerlink" title="1.原码一位"></a>1.原码一位</h3><p><strong>规则:</strong></p>
+<ol>
+<li>乘积的符号位是被乘数和乘数的符号位的异或.</li>
+<li>乘积的绝对值是被惩处的绝对值和乘数的绝对值之积.</li>
+</ol>
+<p><strong>即:[X]原×[Y]原=($X_0\bigoplus Y_0$) ($\mid X \mid \times \mid Y \mid$)</strong></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这是代码(我自己学markdown记的,不重要)</span><br><span class="line">($X_0\bigoplus Y_0$) ($\mid X \mid \times \mid Y \mid$)</span><br></pre></td></tr></tbody></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
+<p>其中$X_0 ,Y_0$是符号位</p>
+<p><strong>eg.$0.1101 \times1.1011$</strong></p>
+<table>
+   <tbody><tr>
+      <th>(缓冲区)</th>
+      <th>D</th>
+      <th colspan="2">A(最后一个是末位)</th>
+      <th>原因和操作</th>
+   </tr>
+   <tr>
+      <td>0</td>
+      <td>0 0 0 0 </td>
+      <td>1 0 1</td>
+      <td>1</td>
+      <td>末位是1,下一行+x</td>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
+   </tr>
+   <tr>
+      <td>0</td>
+      <td>1 1 0 1 </td>
+      <td>    </td>
+      <td> </td>
+      <td>+x</td>
+   </tr>
+   <tr>
+   <td>0</td>
+      <td>1 1 0 1 </td>
+      <td>1 0 1</td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+   <td>0</td>
+      <td>0 1 1 0 </td>
+      <td>1 1 0</td>
+      <td>1</td>
+      <td>整体右移一位,末位是1,下一行+x</td>
+    </tr>
+       <tr>
+      <td>0</td>
+      <td>1 1 0 1 </td>
+      <td></td>
+      <td></td>
+      <td>+x</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0 0 1 1 </td>
+      <td>1 1 0</td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1 0 0 1 </td>
+      <td>1 1 1</td>
+      <td>0</td>
+      <td>右移一位,末位是0,下一行+0</td>
+    </tr>
+     <tr>
+      <td>0</td>
+      <td>0 0 0 0  </td>
+      <td></td>
+      <td></td>
+      <td>+0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1 0 0 1  </td>
+      <td>1 1 1</td>
+      <td>0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0 1 0 0  </td>
+      <td>1 1 1</td>
+      <td>1</td>
+      <td>右移一位,末位是1,下一行+x</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1 1 0 1  </td>
+      <td></td>
+      <td></td>
+      <td>+x</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0 0 0 1  </td>
+      <td>1 1 1</td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1 0 0 0   </td>
+      <td>1 1 1</td>
+      <td>1</td>
+      <td>右移一次</td>
+    </tr>
+</tbody></table>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
+<p><strong>结果:</strong> $0.1101 \times1.1011$=1.1000 1111</p>
+<p><strong>特点:</strong> </p>
+<ol>
+<li>被乘数有几位,运算过程就右移几次,每次右移的时候,数值位的首位补0</li>
+<li>符号位不参与运算,运算前先$\bigoplus$,决定结果的符号</li>
+</ol>
+<h3 id="2-原码二位-1"><a href="#2-原码二位-1" class="headerlink" title="2.原码二位"></a>2.原码二位</h3><p><strong>规则:</strong></p>
+<ol>
+<li><p>原理和原码一位一样,只是从电路层面简化了运算步骤</p>
+</li>
+<li><p>记被乘数的最后两位分别为$A_n A_{n-1}$</p>
+</li>
+<li><p>记$C=A_n\bigoplus A_{n-1}$,</p>
+<p>若$C=0$,则下一步操作是-X,</p>
+<p>若$C=1$,则下一步操作的+2X</p>
+</li>
+</ol>
+<p><strong>eg.</strong> X= +0.100 111, Y= -0.100 111 求X$\times$Y</p>
+<p><strong>准备工作:</strong> </p>
+<p>$-X=[X]_补$=1.011 001(第一位是符号位)</p>
+<p>$2X$=01.001 110(第一位是符号位)</p>
+<table>
+ <tbody><tr>
+  <th>符号位</th>
+  <th>D</th>
+  <th colspan="2">A | An-1 An </th>
+  <th>C=An异或An-1</th>
+  <th>操作</th>
+ </tr>
+   <tr>
+      <td>0 0 0</td>
+      <td>0 0 0 0 0 0</td>
+      <td>1 0 0 1</td>
+      <td>1 1</td>
+      <td>0</td>
+      <td>C=0,下一行-x</td>
+   </tr>
+   <tr>
+      <td>1 1 1</td>
+      <td>0 1 1 0 0 1</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>-x(+x的补码)</td>
+   </tr>
+   <tr>
+      <td>1 1 1</td>
+      <td>0 1 1 0 0 1</td>
+      <td>1 0 0 1</td>
+      <td>1 1</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>1 1 1</td>
+      <td>1 1 0 1 1 0</td>
+      <td>0 1 1 0</td>
+      <td>0 1</td>
+      <td>1</td>
+      <td>右移两位,C=1,下一行+2x</td>
+   </tr>
+   <tr>
+      <td>0 0 1</td>
+      <td>0 0 1 1 1 0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>+2x</td>
+   </tr>
+   <tr>
+      <td>0 0 1</td>
+      <td>0 0 0 1 0 0</td>
+      <td>0 1 1 0</td>
+      <td>0 1</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 0 0</td>
+      <td>0 1 0 0 0 1</td>
+      <td>0 0 0 1</td>
+      <td>1 0</td>
+      <td>1</td>
+      <td>右移两位,C=1,下一行+2x</td>
+   </tr>
+   <tr>
+      <td>0 0 1</td>
+      <td>0 0 1 1 1 0 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>+2x</td>
+   </tr>
+   <tr>
+      <td>0 0 1</td>
+      <td>0 1 1 1 1 1 </td>
+      <td>0 0 0 1</td>
+      <td>1 0</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 0 0</td>
+      <td>0 1 0 1 1 1 </td>
+      <td>1 1 0 0</td>
+      <td>0 1</td>
+      <td></td>
+      <td>右移两位,</td>
+   </tr>
+</tbody></table>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p><strong>结果:</strong><br>+0.100 111$\times$-0.100 111=1.0101 1111 0001</p>
+<p>其中第一位是符号位,是由乘数和被乘数异或得到的</p>
+<p><strong>特点:</strong>(和原码一位区别很大)</p>
+<p><strong>移位的时候,缓存区的数字不变,即缓存区原本的数字是什么,就补什么</strong></p>
+<h3 id="3-补码一位"><a href="#3-补码一位" class="headerlink" title="3.补码一位"></a>3.补码一位</h3><h4 id="1-校正法"><a href="#1-校正法" class="headerlink" title="1.校正法"></a>1.校正法</h4><p><strong>规则:</strong><br>和原码类似,但是最后一位要校正.<br>X$\times$Y,<strong>若Y的符号位是1,则运算结果要加上$-[X]_补$</strong></p>
+<p><strong>eg.</strong><br>X=-0.1101,Y=0.1011<br><strong>准备工作:</strong>$[X]_补$=1.0011,<br>$[Y]_补$=0.1011<br>(求补运算的时候符号位不变,第一位是符号位)</p>
+<table>
+ <tbody><tr>
+  <th>符号</th>
+  <th>D</th>
+  <th>A</th>
+  <th>操作</th>
+ </tr>
+     <tr>
+      <td>0 0</td>
+      <td>0 0 0 0</td>
+      <td>1 0 1 1</td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>0 0 1 1</td>
+      <td></td>
+      <td>+X补</td>
+     </tr>
+     
+     <tr>
+      <td>1 1</td>
+      <td>0 0 1 1</td>
+      <td>1 0 1 1</td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>1 0 0 1</td>
+      <td>1 1 0 1</td>
+      <td>右移一位</td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>0 0 1 1</td>
+      <td></td>
+      <td>+X补</td>
+     </tr>
+     <tr>
+      <td>1 0</td>
+      <td>1 1 0 0</td>
+      <td>1 1 0 1</td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>0 1 1 0</td>
+      <td>0 1 1 0</td>
+      <td>右移一位</td>
+     </tr>
+     <tr>
+      <td>0 0</td>
+      <td>0 0 0 0</td>
+      <td></td>
+      <td>+0</td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>0 1 1 0</td>
+      <td>0 1 1 0</td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>1 0 1 1</td>
+      <td>0 0 1 1</td>
+      <td>右移一位</td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>0 0 1 1</td>
+      <td></td>
+      <td>+X补</td>
+     </tr>
+     <tr>
+      <td>1 0</td>
+      <td>1 1 1 0</td>
+      <td>0 0 1 1</td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>0 1 1 1</td>
+      <td>0 0 0 1</td>
+      <td>右移一位</td>
+     </tr>
+</tbody></table>
+
+<p><strong>结果:</strong>$[X\times Y]_补$=1.0111 0001</p>
+<p><strong>特点:</strong></p>
+<ol>
+<li>右移补位的时候,首位是啥就补啥.</li>
+<li>+0的时候,0的符号位也是0.</li>
+<li>符号位是一起算出来的,不是两个数的符号位异或直接得到的.</li>
+<li>起始的符号位按00算,不论它本身是正是负.</li>
+<li>最后记得加校正!!!第4点的时候,本身的符号位就是00的话,记得-$[X]_补$</li>
+</ol>
+<p><strong>eg2.</strong></p>
+<p>X=-0.1101,Y=-0.1011</p>
+<p><strong>准备工作:</strong>$[X]_补$=1.0011,<br>$[Y]_补$=0.0101<br>(求补运算的时候符号位不变,第一位是符号位)</p>
+<table>
+ <tbody><tr>
+  <th>符号</th>
+  <th>D</th>
+  <th>A</th>
+  <th>操作</th>
+ </tr>
+     <tr>
+      <td>0 0</td>
+      <td>0 0 0 0</td>
+      <td>0 1 0 1</td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>0 0 1 1</td>
+      <td></td>
+      <td>+X补</td>
+     </tr>
+     
+     <tr>
+      <td>1 1</td>
+      <td>0 0 1 1</td>
+      <td>0 1 0 1</td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>1 0 0 1</td>
+      <td>1 0 1 0</td>
+      <td>右移一位</td>
+     </tr>
+     <tr>
+      <td>0 0</td>
+      <td>0 0 0 0</td>
+      <td></td>
+      <td>+0</td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>1 0 0 1</td>
+      <td>1 0 1 0</td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>1 1 0 0</td>
+      <td>1 1 0 1</td>
+      <td>右移一位</td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>0 0 1 1</td>
+      <td></td>
+      <td>+X补</td>
+     </tr>
+     <tr>
+      <td>1 0</td>
+      <td>1 1 1 1</td>
+      <td>1 1 0 1</td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>0 1 1 1</td>
+      <td>1 1 1 0</td>
+      <td>右移一位</td>
+     </tr>
+     <tr>
+      <td>0 0</td>
+      <td>0 0 0 0</td>
+      <td></td>
+      <td>+0</td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>0 1 1 1</td>
+      <td>1 1 1 0</td>
+      <td></td>
+     </tr>
+     <tr>
+      <td>1 1</td>
+      <td>1 0 1 1</td>
+      <td>1 1 1 1</td>
+      <td>右移一位</td>
+     </tr>
+     <tr>
+      <td>0 0</td>
+      <td>1 1 0 1</td>
+      <td></td>
+      <td>+[-X]补</td>
+     </tr>
+     <tr>
+      <td>0 0</td>
+      <td>1 0 0 0</td>
+      <td>1 1 1 1</td>
+      <td>结果</td>
+     </tr>
+</tbody></table>
+
+<p><strong>结果:</strong>$[X\times Y]_补$=0.10001111</p>
+<h4 id="2-Booth法"><a href="#2-Booth法" class="headerlink" title="2.Booth法"></a>2.Booth法</h4><p><strong>规则:</strong> 和原码二位极度相似,但是符号位直接参与运算</p>
+<p>设被乘数$Y$的最后一位是$Y_n$,补一位$A_0$(初值是0),$C=A_0-Y_{n}$</p>
+<table>
+   <tbody><tr>
+      <th>Yn</th>
+      <th>A0</th>
+      <th>C=A0-Yn</th>
+      <th>操作</th>
+   </tr>
+      <tr>
+         <td>0</td>
+         <td>0</td>
+         <td>0</td>
+         <td>+0,右移一次</td>
+      </tr>
+      <tr>
+         <td>0</td>
+         <td>1</td>
+         <td>1</td>
+         <td>+[X]补,右移一次</td>
+      </tr>
+      <tr>
+         <td>1</td>
+         <td>0</td>
+         <td>-1</td>
+         <td>+[-X]补,右移一次</td>
+      </tr>
+      <tr>
+         <td>1</td>
+         <td>1</td>
+         <td>0</td>
+         <td>+0,右移一次</td>
+      </tr>
+</tbody></table>
+
+<p><strong>eg.</strong> X=0.1010,Y=-0.1101利用Booth法补码一位乘法,求乘积.</p>
+<p><strong>准备工作:</strong>$[X]_补$=0.1010,$[-X]_补$=1.0110,$[Y]_补$=1.0011</p>
+<table>
+   <tbody><tr>
+      <th>缓存区</th>
+      <th>D</th>
+      <th>A</th>
+      <th>A0</th>
+      <th>操作</th>
+   </tr>
+      <tr>
+         <td>0 0</td>
+         <td>0 0 0 0</td>
+         <td>1 0 0 1 1</td>
+         <td>0</td>
+         <td></td>  
+      </tr>
+      <tr>
+         <td>1 1</td>
+         <td>0 1 1 0</td>
+         <td></td>
+         <td></td>
+         <td>+[-X]补</td>  
+      </tr>
+      <tr>
+         <td>1 1</td>
+         <td>0 1 1 0</td>
+         <td>1 0 0 1 1</td>
+         <td>0</td>
+         <td></td>  
+      </tr>
+      <tr>
+         <td>1 1</td>
+         <td>1 0 1 1</td>
+         <td>0 1 0 0 1</td>
+         <td>1</td>
+         <td>右移一位</td>  
+      </tr>
+      <tr>
+         <td>0 0</td>
+         <td>0 0 0 0</td>
+         <td></td>
+         <td></td>
+         <td>+0</td>  
+      </tr>
+      <tr>
+         <td>1 1</td>
+         <td>1 0 1 1</td>
+         <td>0 1 0 0 1</td>
+         <td>1</td>
+         <td></td>  
+      </tr>
+      <tr>
+         <td>1 1</td>
+         <td>1 1 0 1</td>
+         <td>1 0 1 0 0</td>
+         <td>1</td>
+         <td>右移一位</td>  
+      </tr>
+      <tr>
+         <td>0 0</td>
+         <td>1 0 1 0</td>
+         <td></td>
+         <td></td>
+         <td>+[X]补</td>  
+      </tr>
+      <tr>
+         <td>0 0</td>
+         <td>0 1 1 1</td>
+         <td>1 0 1 0 0</td>
+         <td>1</td>
+         <td></td>  
+      </tr>
+      <tr>
+         <td>0 0</td>
+         <td>0 0 1 1</td>
+         <td>1 1 0 1 0</td>
+         <td>0</td>
+         <td>右移一位</td>  
+      </tr>
+      <tr>
+         <td>0 0</td>
+         <td>0 0 0 0</td>
+         <td></td>
+         <td></td>
+         <td>+0</td>  
+      </tr>
+      <tr>
+         <td>0 0</td>
+         <td>0 0 1 1</td>
+         <td>1 1 0 1 0</td>
+         <td>0</td>
+         <td></td>  
+      </tr>
+      <tr>
+         <td>0 0</td>
+         <td>0 0 0 1</td>
+         <td>1 1 1 0 1</td>
+         <td>0</td>
+         <td>右移一位</td>  
+      </tr>
+      <tr>
+         <td>1 1</td>
+         <td>0 1 1 0</td>
+         <td></td>
+         <td></td>
+         <td>+[-X]补</td>  
+      </tr>
+      <tr>
+         <td>1 1</td>
+         <td>0 1 1 1</td>
+         <td>1 1 1 0 1</td>
+         <td>0</td>
+         <td></td>  
+      </tr>
+      <tr>
+         <td>1 1</td>
+         <td>1 0 1 1 </td>
+         <td>1 1 1 1 0 </td>
+         <td>1</td>
+         <td>右移一位</td>  
+      </tr>
+</tbody></table>
+
+
+<p><strong>结果:</strong> $[X\times Y]_补$=1.0111 1110</p>
+<p><strong>特点:</strong> 缓存区不算做结果的符号位,补的$A_0$不算结果,相当于另一个缓存区</p>
+<h3 id="4-补码二位-1"><a href="#4-补码二位-1" class="headerlink" title="4.补码二位"></a>4.补码二位</h3><p><strong>规则:</strong> </p>
+<ol>
+<li>和补码一位的Booth法类似,原理相同,只是在数字电路层面做了优化.<strong><em>记得补前后的缓存区 !</em></strong></li>
+<li>当乘数(包括符号位)位数是偶数n时,右移次数位n/2次,最后一次只移1位(技巧,当补码一位的Booth法考虑)</li>
+</ol>
+<table>
+   <tbody><tr>
+      <th>Y(i-2) Y(i-1) Y(i)</th>
+      <th>Y(i)+Y(i-1)-2Y(i-2)</th>
+      <th>操作</th>
+   </tr>
+      <tr>
+         <th>0 0 0</th>
+         <th>0</th>
+         <th>+0, 右移2位</th>   
+      </tr>
+      <tr>
+         <th>0 0 1</th>
+         <th>1</th>
+         <th>+[X]补, 右移2位</th>   
+      </tr>
+      <tr>
+         <th>0 1 0</th>
+         <th>1</th>
+         <th>+[X]补, 右移2位</th>   
+      </tr>
+      <tr>
+         <th>0 1 1</th>
+         <th>2</th>
+         <th>+2[X]补, 右移2位</th>   
+      </tr>
+      <tr>
+         <th>1 0 0</th>
+         <th>-2</th>
+         <th>+2[-X]补, 右移2位</th>   
+      </tr>
+      <tr>
+         <th>1 0 1</th>
+         <th>-1</th>
+         <th>+[-X]补, 右移2位</th>   
+      </tr>
+      <tr>
+         <th>1 1 0</th>
+         <th>-1</th>
+         <th>+[-X]补, 右移2位</th>   
+      </tr>
+      <tr>
+         <th>1 1 1</th>
+         <th>0</th>
+         <th>+0, 右移2位</th>   
+      </tr>
+</tbody></table>
+
+<p><strong>eg.</strong> 已知X=-0.1101,Y=-0.1011,试用补码二位乘法求积.<br><strong>准备工作:</strong> [X]补=1.0011,[Y]补=1.0101,为了不溢出,采用3符号位.<br>[X]补=111.0011 2[X]补=110.0110 [-X]补=000.1101 2[-X]补=001.1010.同时[Y]补=11.0101</p>
+<table>
+   <tbody><tr>
+      <th>前缓存区</th>
+      <th>D</th>
+      <th>A</th>
+      <th>后缓存区</th>
+      <th>操作</th>
+   </tr>
+      <tr>
+         <td>0 0 0</td>
+         <td>0 0 0 0</td>
+         <td>1 1 0 1 0 1</td>
+         <td>0</td>
+         <td></td>
+      </tr>
+      <tr>
+         <td>1 1 1</td>
+         <td>0 0 1 1</td>
+         <td></td>
+         <td></td>
+         <td>+[X]补</td>
+      </tr>
+      <tr>
+         <td>1 1 1</td>
+         <td>0 0 1 1</td>
+         <td>1 1 0 1 0 1</td>
+         <td></td>
+         <td></td>
+      </tr>
+      <tr>
+         <td>1 1 1</td>
+         <td>1 1 0 0</td>
+         <td>1 1 1 1 0 1</td>
+         <td>0</td>
+         <td>右移2位</td>
+      </tr>
+      <tr>
+         <td>1 1 1</td>
+         <td>0 0 1 1</td>
+         <td></td>
+         <td></td>
+         <td>+[X]补</td>
+      </tr>
+      <tr>
+         <td>1 1 0</td>
+         <td>1 1 1 1</td>
+         <td>1 1 1 1 0 1</td>
+         <td>0</td>
+         <td></td>
+      </tr>
+      <tr>
+         <td>1 1 1</td>
+         <td>1 0 1 1</td>
+         <td>1 1 1 1 1 1</td>
+         <td>0</td>
+         <td>右移2位</td>
+      </tr>
+      <tr>
+         <td>0 0 0</td>
+         <td>1 1 0 1</td>
+         <td></td>
+         <td></td>
+         <td>+[-X]补</td>
+      </tr>
+      <tr>
+         <td>0 0 0</td>
+         <td>1 0 0 0</td>
+         <td>1 1 1 1 1 1 </td>
+         <td>0</td>
+         <td></td>
+      </tr>
+</tbody></table>
+
+<p><strong>结果:</strong>[X $\cdot$ Y]补=0.1000 1111</p>
+<hr>
+<h1 id="三、定点数除法运算"><a href="#三、定点数除法运算" class="headerlink" title="三、定点数除法运算"></a>三、定点数除法运算</h1><h2 id="1-原码"><a href="#1-原码" class="headerlink" title="1.原码"></a>1.原码</h2><h2 id="2-恢复余数法"><a href="#2-恢复余数法" class="headerlink" title="2.恢复余数法"></a>2.恢复余数法</h2><h2 id="3-加减交替法"><a href="#3-加减交替法" class="headerlink" title="3.加减交替法"></a>3.加减交替法</h2><h3 id="1-原码-1"><a href="#1-原码-1" class="headerlink" title="1.原码"></a>1.原码</h3><p><strong>规则:</strong> </p>
+<ol>
+<li><p>除数$\not ={0}$ ,</p>
+<p>纯小数时,|被除数|&lt;|除数|;</p>
+<p>纯整数时,|被除数|&gt;|除数|.</p>
+</li>
+<li><p>和原码乘法类似,也是符号和绝对值分开处理.<br>(乘法是逐次加乘数,除法是逐次减除数)</p>
+</li>
+</ol>
+<h3 id="2-恢复余数法-1"><a href="#2-恢复余数法-1" class="headerlink" title="2.恢复余数法"></a>2.恢复余数法</h3><p><strong>规则:</strong></p>
+<p>这是为了计算机的运算,根据原码的除法设计的算法,因为计算机只有运算后才知道该商0还是商1,<strong>所以当商了0的时候,应该把减掉的除数加回来.</strong> 其他的和原码运算一样.</p>
+<p><strong>eg.</strong> 被除数X=-0.1000 1011<br>,除数Y=0.1110,用原码恢复余数法,求商和余数.</p>
+<p><strong>准备工作:</strong> 满足|X|&lt;|Y|,|Y|$\not ={0}$.<br>商符号是1$\bigoplus$ 0=1,<br>|X|原=1.1000 1011<br>|Y|原=0.1110</p>
+<table>
+   <tbody><tr>
+      <th>缓冲区</th>
+      <th>被除数(余数)</th>
+      <th>操作</th>
+      <th>商</th>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>1 0 0 0 1 0 1 1</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 1</td>
+      <td>0 0 0 1 0 1 1 </td>
+      <td>左移1位</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>1 1</td>
+      <td>0 0 1 0 </td>
+      <td>-Y=+|-Y|补</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>0 0 1 1 0 1 1 </td>
+      <td>缓冲区结果是00,够减,商1</td>
+      <td>1</td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>0 1 1 0 1 1 </td>
+      <td>左移1位</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>1 1</td>
+      <td>0 0 1 0  </td>
+      <td>-|Y|</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>1 1</td>
+      <td>1 0 0 0 1 1 </td>
+      <td>缓冲区结果是11,不够减,商0</td>
+      <td>1 0</td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>1 1 1 0 </td>
+      <td>+|Y|</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>0 1 1 0 1 1 </td>
+      <td>恢复余数</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>1 1 0 1 1 </td>
+      <td>左移一位</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>1 1</td>
+      <td>0 0 1 0</td>
+      <td>-|Y|</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>1 1</td>
+      <td>1 1 1 1 1</td>
+      <td>商0</td>
+      <td>1 0 0</td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>1 1 1 0</td>
+      <td>+|Y|</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>1 1 0 1 1</td>
+      <td>恢复余数</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 1</td>
+      <td>1 0 1 1</td>
+      <td>左移1位</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>1 1</td>
+      <td>0 0 1 0</td>
+      <td>-|Y|</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>1 1 0 1</td>
+      <td>商1</td>
+      <td>1 0 0 1</td>
+   </tr>
+</tbody></table>
+
+<p><strong>余数小于被除数了,停止计算</strong><br><strong>结果是</strong>商1.1001 余0.1101</p>
+<h3 id="3-加减交替法-1"><a href="#3-加减交替法-1" class="headerlink" title="3.加减交替法"></a>3.加减交替法</h3><p><strong>规则:</strong><br>和恢复余数法一样<br><strong>原理</strong>和恢复余数法完全一样,为了提高效率,商0时,本该恢复余数再-|Y|,改成直接+|Y|.因为左移相当于x2,商0后,如果不恢复余数的话,上次-|Y|的结果就是-2|Y|,所以这次运算直接+|Y|弥补,还是相当于这次-|Y|</p>
+<p><strong>eg.</strong> 若X＝-0.10001011，Y＝0.1110 试利用原码加减交替<br>法求商及余数。</p>
+<p><strong>准备工作:</strong> 符号位=1$\bigoplus$ 0=1,|X|原=1.1000 1011,|Y|原=0.1110.<br>除数Y!=0,|X|&lt;|Y|成立.</p>
+<table>
+   <tbody><tr>
+      <th>缓冲区</th>
+      <th>被除数(余数)</th>
+      <th>操作</th>
+      <th>商</th>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>1 0 0 0 1 0 1 1</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 1</td>
+      <td>0 0 0 1 0 1 1 </td>
+      <td>左移1位</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>1 1</td>
+      <td>0 0 1 0 </td>
+      <td>-Y=+|-Y|补</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>0 0 1 1 0 1 1 </td>
+      <td>缓冲区结果是00,够减,商1</td>
+      <td>1</td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>0 1 1 0 1 1 </td>
+      <td>左移1位</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>1 1</td>
+      <td>0 0 1 0  </td>
+      <td>-|Y|</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>1 1</td>
+      <td>1 0 0 0 1 1 </td>
+      <td>缓冲区结果是11,不够减,商0</td>
+      <td>1 0</td>
+   </tr>
+   <tr>
+      <td>1 1</td>
+      <td>0 0 0 1 1 </td>
+      <td>左移一位</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>1 1 1 0</td>
+      <td>+|Y|</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>1 1</td>
+      <td>1 1 1 1 1</td>
+      <td>商0</td>
+      <td>1 0 0</td>
+   </tr>
+
+   <tr>
+      <td>1 1</td>
+      <td>1 1 1 1</td>
+      <td>左移1位</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>1 1 1 0</td>
+      <td>+|Y|</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0 0</td>
+      <td>1 0 1 1</td>
+      <td>商1</td>
+      <td>1 1 0 1</td>
+   </tr>
+</tbody></table>
+
+<p><strong>结果和恢复余数法完全一样</strong></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -518,7 +1488,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Ricado-Xv.github.io/2020/03/08/hello-world/">http://Ricado-Xv.github.io/2020/03/08/hello-world/</a>
+                    <a href="http://Ricado-Xv.github.io/2020/03/09/ji-suan-ji-zu-cheng-ding-dian-shu-yun-suan/">http://Ricado-Xv.github.io/2020/03/09/ji-suan-ji-zu-cheng-ding-dian-shu-yun-suan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -555,7 +1525,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                                    <span class="chip bg-color">-计算机组成原理</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -723,22 +1697,32 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/09/ji-suan-ji-zu-cheng-ding-dian-shu-yun-suan/">
+                <a href="/2020/03/09/markdown-yu-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="计算机组成-定点数的加减乘除">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="MarkDown简明语法">
                         
-                        <span class="card-title">计算机组成-定点数的加减乘除</span>
+                        <span class="card-title">MarkDown简明语法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            123小代码:&lt;table&gt; &lt;tr&gt; &lt;th&gt; &lt;td&gt; 异或: \bigoplus不等号: \not =
-一 、定点数加减运算1. 补码2. BCD码3. 移码
-1. 补码(最常用)
-$[
+                            hexo blog搭建教程(clik here)一个人来到田纳西
+毫无疑问
+*我做的馅饼 
+是全天下*
+最好吃的
+
+
+引用
+
+引用中的引用
+
+
+
+大标题小标题#一级标题##二级标题###三级标题####四级标题#####五级标题######
                         
                     </div>
                     <div class="publish-info">
@@ -756,8 +1740,8 @@ $[
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
-                        <span class="chip bg-color">-计算机组成原理</span>
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">-Markdown</span>
                     </a>
                     
                 </div>
@@ -768,7 +1752,7 @@ $[
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/03/08/hello-world/">
@@ -798,7 +1782,6 @@ $[
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -966,6 +1949,13 @@ $[
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
     <footer class="page-footer bg-color">
