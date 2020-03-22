@@ -495,56 +495,43 @@
 </ul>
 <p>$f(k)=e^{(\alpha+j\beta)k}=e^{\alpha k}e^{j\beta k}$</p>
 <p>令a=$e^{\alpha}$,上式可展开为</p>
+<p>$f(k)=a^kcos(\beta k)+ja^ksin(\beta k)$</p>
+<p>一个复数离散信号可分解为实,虚,两部分,即:</p>
+<p>Re[f(t)]=$a^{k}cos(\beta k)$</p>
+<p>Im[f(t)]=$a^{k}sin(\beta k)$</p>
+<p>显而易见,离散信号的指数上的复数的实部和虚部的意义,和连续信号相同.</p>
+<ul>
+<li><font size="4"><strong>(4)能量信号和功率信号</strong></font></li>
+</ul>
+<p><font color="green">有知识点:</font>判断平均功率以及能量是否有限.</p>
+</li>
+</ul>
+<p>  <strong>为了研究能量或功率的特性,通常我们关注信号(电流/电压)在单位电阻上的能量或功率,也称为归一化能量或功率</strong></p>
+<ul>
+<li><p>连续信号:</p>
+<p>信号f(t)在单位电阻上的瞬时功率为|f(t)|$^2$,(P=$\frac{u^2}{R}$,P=$\frac{i^2}{R}$),</p>
+<p>所以在区间[-a,a]内,能量为:</p>
+<p>$\int^a_{-a} |f(t)|^2dt$</p>
+<p>平均功率为:</p>
+<p>$\frac{1}{2a}\int^a_{-a}|f(t)|^2dt$</p>
+</li>
+</ul>
+<p> <strong>信号的能量定义为在区间(-$\infin$,$\infin$)中,信号f(t)的能量,用字母E表示,即</strong></p>
+<p> E=$lim_{a\to\infty}\int^a_{-a}|f(t)|^2dt$</p>
+<p> P=$lim_{a\to\infty}\frac{1}{2a}\int^a_{-a}|f(t)|^2dt$</p>
+<p> 若信号f(t)的能量有界,则简称其为能量有界信号(此时,P=0).</p>
+<p> 若信号f(t)的功率有界,则简称其为功率信号(,此时,E=$\infty$).</p>
+<p> <strong>只有在有限时间区间不为零的信号是能量信号,这些信号的平均功率为零,因此只能从能量的角度考察</strong></p>
+<p> <strong>直流信号,周期信号,阶跃信号都是功率信号,它们的能量为无限,只能从功率的角度考察</strong></p>
+<p> (有的信号即不是能量信号,也不是功率信号,比如$e^{-t}$)</p>
+<ul>
+<li><p>离散信号:</p>
+<p>对于能量信号和功率信号的定义,和连续信号相同.</p>
 </li>
 </ul>
 </li>
 </ul>
-<pre><code>  $f(k)=a^kcos(\beta k)+ja^ksin(\beta k)$
-
-  一个复数离散信号可分解为实,虚,两部分,即:
-
-  Re[f(t)]=$a^{k}cos(\beta k)$
-
-  Im[f(t)]=$a^{k}sin(\beta k)$
-
-  显而易见,离散信号的指数上的复数的实部和虚部的意义,和连续信号相同.
-+ &lt;font size='4'&gt;**(4)能量信号和功率信号**&lt;/font&gt;
-
-   &lt;font color='green'&gt;有知识点:&lt;/font&gt;判断平均功率以及能量是否有限.
-
-   **为了研究能量或功率的特性,通常我们关注信号(电流/电压)在单位电阻上的能量或功率,也称为归一化能量或功率**
-
-  - 连续信号:
-
-   信号f(t)在单位电阻上的瞬时功率为|f(t)|$^2$,(P=$\frac{u^2}{R}$,P=$\frac{i^2}{R}$),
-
-  所以在区间[-a,a]内,能量为:
-
-  $\int^a_{-a} |f(t)|^2dt$
-
-  平均功率为:
-
-  $\frac{1}{2a}\int^a_{-a}|f(t)|^2dt$
-
-  **信号的能量定义为在区间(-$\infin$,$\infin$)中,信号f(t)的能量,用字母E表示,即**
-
-  E=$lim_{a\to\infty}\int^a_{-a}|f(t)|^2dt$
-
-  P=$lim_{a\to\infty}\frac{1}{2a}\int^a_{-a}|f(t)|^2dt$
-
-  若信号f(t)的能量有界,则简称其为能量有界信号(此时,P=0).
-
-  若信号f(t)的功率有界,则简称其为功率信号(,此时,E=$\infty$).
-
-  **只有在有限时间区间不为零的信号是能量信号,这些信号的平均功率为零,因此只能从能量的角度考察**
-
-  **直流信号,周期信号,阶跃信号都是功率信号,它们的能量为无限,只能从功率的角度考察**
-
-  (有的信号即不是能量信号,也不是功率信号,比如$e^{-t}$)
-
-  - 离散信号:
-
-    对于能量信号和功率信号的定义,和连续信号相同.</code></pre><h2 id="2-信号的基本运算"><a href="#2-信号的基本运算" class="headerlink" title="2.信号的基本运算"></a><font size="5">2.信号的基本运算</font></h2><ul>
+<h2 id="2-信号的基本运算"><a href="#2-信号的基本运算" class="headerlink" title="2.信号的基本运算"></a><font size="5">2.信号的基本运算</font></h2><ul>
 <li><p><font size="4">(1)加法和乘法</font></p>
 <p>对应位置对应运算即可</p>
 </li>
@@ -568,21 +555,20 @@
 </li>
 <li><p><font size="4">冲激函数的导数和积分</font></p>
 <ul>
-<li><p>一阶导数:<br><code>下面的fai(t)只是一个性能优良的检验函数,没有实际意义</code></p>
+<li><p>一阶导数:</p>
 <p>$\int^\infty_{-\infty} \delta^{(1)}(t)\phi (t)dt=\int^\infty_{-\infty}\delta(t)\phi^{(1)}(t)dt=-\phi^{(1)}(0)$  </p>
+<ul>
+<li>n阶导数:</li>
+</ul>
+<p>$\int^\infty_{-\infty} \delta^{(n)}(t)\phi (t)dt=\int^\infty_{-\infty}\delta(t)\phi^{(n)}(t)dt=(-1)^n\phi^{(n)}(0)$  </p>
+<ul>
+<li>阶跃函数的导数(写在这里是为了对比)</li>
+</ul>
+<p>$\int^\infty_{-\infty} \xi^{(1)}(t)\phi (t)dt=\int^\infty_{-\infty}\xi(t)\phi^{(1)}(t)dt=-\phi(0)$ </p>
+<p>到这里,证明了$\delta(t)=\xi (t)^`$.冲激函数是阶跃函数的导数</p>
 </li>
 </ul>
 </li>
-</ul>
-<pre><code>- n阶导数:
-
-$\int^\infty_{-\infty} \delta^{(n)}(t)\phi (t)dt=\int^\infty_{-\infty}\delta(t)\phi^{(n)}(t)dt=(-1)^n\phi^{(n)}(0)$  
-
-- 阶跃函数的导数(写在这里是为了对比)
-
- $\int^\infty_{-\infty} \xi^{(1)}(t)\phi (t)dt=\int^\infty_{-\infty}\xi(t)\phi^{(1)}(t)dt=-\phi(0)$ 
-
- 到这里,证明了$\delta(t)=\xi (t)^`$.冲激函数是阶跃函数的导数</code></pre><ul>
 <li><p><font size="4">冲激函数的性质</font></p>
 <ul>
 <li><p>和普通函数的乘积</p>
@@ -638,7 +624,7 @@ $\int^\infty_{-\infty} \delta^{(n)}(t)\phi (t)dt=\int^\infty_{-\infty}\delta(t)\
 </ul>
 <h2 id="4-系统框图"><a href="#4-系统框图" class="headerlink" title="4.系统框图"></a><font size="5">4.系统框图</font></h2><p><strong>没啥知识点,就是两种例题.</strong></p>
 <p><font size="4"><strong>Eg1.</strong> 求系统的微分方程</font></p>
-<p><img src="%5Cpictures/0322-%E7%B3%BB%E7%BB%9F%E6%A1%86%E5%9B%BE1.png" alt="picture"></p>
+<p><img src="/2020/03/22/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/0322-picture1.jpg" alt="picture"></p>
 <p>以两个加法器为核心,得到两个方程:(为了方便,我把t省略了)</p>
 <p>$f=x^{(2)}+a_1x^{(1)}+a_0x$,       还有$y=b_2x^{(2)}+b_1x^{(1)}+b_0x$</p>
 <p>变形:</p>
@@ -652,7 +638,7 @@ $\int^\infty_{-\infty} \delta^{(n)}(t)\phi (t)dt=\int^\infty_{-\infty}\delta(t)\
 <li>答案的形式是f(t),y(t)的形式互相交替.</li>
 </ol>
 <p><font size="4"><strong>Eg2.</strong> 求系统的差分方程</font></p>
-<p><img src="%5Cpictures/0322-%E7%B3%BB%E7%BB%9F%E6%A1%86%E5%9B%BE2.png" alt="picture"></p>
+<p><img src="/2020/03/22/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/0322-picture2.jpg" alt="picture"></p>
 <p>步骤和特点和求微分方程完全一样!!!</p>
 <p>这个例子的答案是:<br>$y(k)+a_1y(k-1)+a_0y(k-2)=b_2f(k)-b_0f(k-2)$</p>
 <script>
@@ -698,7 +684,7 @@ $\int^\infty_{-\infty} \delta^{(n)}(t)\phi (t)dt=\int^\infty_{-\infty}\delta(t)\
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Ricado-Xv.github.io/2020/03/22/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/">http://Ricado-Xv.github.io/2020/03/22/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/</a>
+                    <a href="http://Ricado-Xv.github.io/2020/03/22/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/">http://Ricado-Xv.github.io/2020/03/22/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -908,7 +894,7 @@ $\int^\infty_{-\infty} \delta^{(n)}(t)\phi (t)dt=\int^\infty_{-\infty}\delta(t)\
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2020/03/22/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/">
+                <a href="/2020/03/22/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/xin-hao-yu-xi-tong-shi-yu-he-pin-yu-fen-xi/">
                     <div class="card-image">
                         
                         
