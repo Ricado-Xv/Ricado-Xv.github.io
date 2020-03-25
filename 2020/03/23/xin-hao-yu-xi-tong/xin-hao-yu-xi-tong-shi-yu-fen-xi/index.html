@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="信号与系统-基础知识篇, Richardo-Xv-Blog">
+    <meta name="keywords" content="信号与系统/信号与系统-时域分析, Richardo-Xv-Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>信号与系统-基础知识篇 | Richardo-Xv-Blog</title>
+    <title>信号与系统/信号与系统-时域分析 | Richardo-Xv-Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,7 +311,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">信号与系统-基础知识篇</h1>
+                    <h1 class="description center-align post-title">信号与系统/信号与系统-时域分析</h1>
                 </div>
             </div>
         </div>
@@ -426,13 +426,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/">
-                                <span class="chip bg-color">-信号与系统</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -444,7 +440,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-22
+                    2020-03-23
                 </div>
                 
 
@@ -453,7 +449,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    1.6k
                 </div>
                 
 
@@ -466,182 +462,126 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、基本知识"><a href="#一、基本知识" class="headerlink" title="一、基本知识"></a>一、基本知识</h1><h2 id="1-信号的分类"><a href="#1-信号的分类" class="headerlink" title="1.信号的分类"></a><font size="5">1.信号的分类</font></h2><ul>
-<li><p><font size="4"><strong>(1)连续信号和离散信号</strong></font></p>
-<p>  <strong>主要用在时域分析</strong>,略.</p>
-</li>
-<li><p><font size="4"><strong>(2)周期信号和非周期信号</strong></font></p>
-<p> <font color="green">有知识点</font>:判断这个信号是不是周期信号.</p>
-<p> <strong>eg.</strong>$f_1(k)=sin(\frac{\pi}{7}k+\frac{\pi}{6})$</p>
-<p> $\omega_1=\frac{\pi}{7}$,$\frac{2\pi}{\omega_1}=14$</p>
-<p> 14是整数,所以$f_1(k)$是周期序列,周期$N_1$=14</p>
-<p> 如果$\frac{2\pi}{\omega}$结果是无理数,则不是周期信号.</p>
-</li>
-<li><p><font size="4"><strong>(3)实信号和复信号(重要)</strong></font><br> <strong>主要用在频域分析</strong></p>
-<p> <font color="deep red">概念</font>:物理可实现的信号常常是时间的实函数(或序列),其在各个时刻的值为实数.</p>
-<p> <font color="deep red">函数(或序列)值为复数的信号称为复信号,最常用的是复指数信号.</font></p>
-<ul>
-<li><p>连续信号的复指数信号可表示为</p>
-<p>$f(t)=e^{st}$,$-\infin&lt;t&lt;\infty$</p>
-<p>式中复变量s=$\delta+j\omega$,$\delta$是s的实部,记为Re[s],$\omega$是s的虚部,记为Im[s].根据欧拉公式展开.</p>
-<p>$f(t)=e^{(\delta+j\omega)t}=e^{\delta t}cos(\omega t)+je^{\delta t}sin(\omega t)$</p>
-<p>一个复数连续信号可分解为实,虚,两部分,即:</p>
-<p>Re[f(t)]=$e^{\delta t}cos(\omega t)$</p>
-<p>Im[f(t)]=$e^{\delta t}sin(\omega t)$</p>
-<p>二者都是实信号,并且频率相同,振幅随着时间的变化余(正)弦振荡.<strong>s的实部$\delta$表示该信号振幅随时间变化的状况,s的虚部$\omega$表示其振荡角频率</strong>.</p>
-<p>$\delta$&gt;0,表示增幅振荡,$\delta$&lt;0表示衰减振荡,$\delta$=0则表示等幅振荡</p>
-<ul>
-<li>b.离散信号的复指数信号可表示为</li>
-</ul>
-<p>$f(k)=e^{(\alpha+j\beta)k}=e^{\alpha k}e^{j\beta k}$</p>
-<p>令a=$e^{\alpha}$,上式可展开为</p>
-<p>$f(k)=a^kcos(\beta k)+ja^ksin(\beta k)$</p>
-<p>一个复数离散信号可分解为实,虚,两部分,即:</p>
-<p>Re[f(t)]=$a^{k}cos(\beta k)$</p>
-<p>Im[f(t)]=$a^{k}sin(\beta k)$</p>
-<p>显而易见,离散信号的指数上的复数的实部和虚部的意义,和连续信号相同.</p>
-<ul>
-<li><font size="4"><strong>(4)能量信号和功率信号</strong></font></li>
-</ul>
-<p><font color="green">有知识点:</font>判断平均功率以及能量是否有限.</p>
-</li>
-</ul>
-<p>  <strong>为了研究能量或功率的特性,通常我们关注信号(电流/电压)在单位电阻上的能量或功率,也称为归一化能量或功率</strong></p>
-<ul>
-<li><p>连续信号:</p>
-<p>信号f(t)在单位电阻上的瞬时功率为|f(t)|$^2$,(P=$\frac{u^2}{R}$,P=$\frac{i^2}{R}$),</p>
-<p>所以在区间[-a,a]内,能量为:</p>
-<p>$\int^a_{-a} |f(t)|^2dt$</p>
-<p>平均功率为:</p>
-<p>$\frac{1}{2a}\int^a_{-a}|f(t)|^2dt$</p>
-</li>
-</ul>
-<p> <strong>信号的能量定义为在区间(-$\infin$,$\infin$)中,信号f(t)的能量,用字母E表示,即</strong></p>
-<p> E=$lim_{a\to\infty}\int^a_{-a}|f(t)|^2dt$</p>
-<p> P=$lim_{a\to\infty}\frac{1}{2a}\int^a_{-a}|f(t)|^2dt$</p>
-<p> 若信号f(t)的能量有界,则简称其为能量有界信号(此时,P=0).</p>
-<p> 若信号f(t)的功率有界,则简称其为功率信号(,此时,E=$\infty$).</p>
-<p> <strong>只有在有限时间区间不为零的信号是能量信号,这些信号的平均功率为零,因此只能从能量的角度考察</strong></p>
-<p> <strong>直流信号,周期信号,阶跃信号都是功率信号,它们的能量为无限,只能从功率的角度考察</strong></p>
-<p> (有的信号即不是能量信号,也不是功率信号,比如$e^{-t}$)</p>
-<ul>
-<li><p>离散信号:</p>
-<p>对于能量信号和功率信号的定义,和连续信号相同.</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-信号的基本运算"><a href="#2-信号的基本运算" class="headerlink" title="2.信号的基本运算"></a><font size="5">2.信号的基本运算</font></h2><ul>
-<li><p><font size="4">(1)加法和乘法</font></p>
-<p>对应位置对应运算即可</p>
-</li>
-<li><p><font size="4">(2)反转和平移</font></p>
-</li>
-<li><p><font size="4">(3)尺度变换</font></p>
-<p><strong>都简单,只有一个要点:推荐运算顺序是<font size="4" color="red">平移-尺度变换-反折</font></strong></p>
-</li>
-</ul>
-<h2 id="3-阶跃函数和冲激函数"><a href="#3-阶跃函数和冲激函数" class="headerlink" title="3.阶跃函数和冲激函数"></a><font size="5">3.阶跃函数和冲激函数</font></h2><ul>
-<li><p><font size="4">阶跃函数和冲激函数</font></p>
-<ul>
-<li><p>阶跃函数是在0点突变成1(t&lt;0,$\xi$(t)=0;t&gt;0,$\xi$(t)=1;<strong>t=0,$\xi$(t)=1/2</strong>)</p>
-</li>
-<li><p>冲激函数是阶跃函数的导数(t=0,$\delta$(t)=1;t!=0,$\delta$(t)=0)</p>
-</li>
-</ul>
-</li>
-<li><p><font size="4">冲激函数的广义函数定义</font> </p>
-<p> 这个不重要,只是一个数学概念</p>
-</li>
-<li><p><font size="4">冲激函数的导数和积分</font></p>
-<ul>
-<li><p>一阶导数:</p>
-<p>$\int^\infty_{-\infty} \delta^{(1)}(t)\phi (t)dt=\int^\infty_{-\infty}\delta(t)\phi^{(1)}(t)dt=-\phi^{(1)}(0)$  </p>
-<ul>
-<li>n阶导数:</li>
-</ul>
-<p>$\int^\infty_{-\infty} \delta^{(n)}(t)\phi (t)dt=\int^\infty_{-\infty}\delta(t)\phi^{(n)}(t)dt=(-1)^n\phi^{(n)}(0)$  </p>
-<ul>
-<li>阶跃函数的导数(写在这里是为了对比)</li>
-</ul>
-<p>$\int^\infty_{-\infty} \xi^{(1)}(t)\phi (t)dt=\int^\infty_{-\infty}\xi(t)\phi^{(1)}(t)dt=-\phi(0)$ </p>
-<p>到这里,证明了$\delta(t)=\xi (t)^`$.冲激函数是阶跃函数的导数</p>
-</li>
-</ul>
-</li>
-<li><p><font size="4">冲激函数的性质</font></p>
-<ul>
-<li><p>和普通函数的乘积</p>
-<p> $f(t)\delta(t)=f(0)\delta(t)$;</p>
-<p> $\int^\infty_{-\infty} f(t)\delta(t)dt=f(0)$; </p>
-<p> $f(t)\delta^<code>(t)=f(0)\delta^</code>(t)-f^`(0)\delta(t)$;</p>
-<p> $\int^\infty_{-\infty} f(t)\delta^<code>(t)dt=-f^</code>(0)$; </p>
-</li>
-<li><p>移位 </p>
-<p>$\delta (t)$表示t=0处的冲激,t=t1处的冲激可以表示为$\delta(t-t_1)$</p>
-<p>$\int^\infty_{-\infty} \delta^<code>(t-t_1)\phi(t)dt=-\phi^</code>(t_1)$; </p>
-<p>对于普通函数:</p>
-<ul>
-<li><p>$f(t)\delta(t-t_1)=f(t_1)\delta(t-t_1)$</p>
-</li>
-<li><p>$\int _{-\infty}^\infty f(t)\delta(t-t_1)dt=f(t_1)$</p>
-</li>
-<li><p>$f(t)\delta^<code>(t-t_1)=f(t_1)\delta^</code>(t-t_1)-f^`(t_1)\delta(t-t_1)$</p>
-</li>
-<li><p>$\int _{-\infty}^\infty f(t)\delta^<code>(t-t_1)dt=f^</code>(t_1)$</p>
-</li>
-</ul>
-</li>
-<li><p>尺度变换</p>
-<ul>
-<li>$\delta(at)=\frac{1}{|a|}\delta(t)$ </li>
-<li>$\delta^<code>(at)=\frac{1}{|a|}\frac{1}{a}\delta^</code>(t)$</li>
-<li>$\delta^{n}(at)=\frac{1}{|a|}(\frac{1}{a})^{n}\delta^n(t)$</li>
-</ul>
-</li>
-<li><p>奇偶性</p>
-<p>由$\delta^{n}(at)=\frac{1}{|a|}(\frac{1}{a})^{n}\delta^n(t)$,取a=-1.</p>
-<ul>
-<li>n为偶数时$\delta^{n}(-t)=\frac{1}{|-1|}(\frac{1}{-1})^{n}\delta^n(t)$ </li>
-</ul>
-<p>即:$\delta^{n}(t)$是t的偶函数</p>
-<ul>
-<li>n为奇数时$\delta^{n}(-t)=\frac{1}{|-1|}(\frac{1}{-1})^{n}\delta^n(t)$ </li>
-</ul>
-<p>即:$\delta^{n}(t)$是t的奇函数</p>
-</li>
-<li><p>复合函数形式的冲激函数</p>
-<p>$\delta[f(t)]$</p>
-<p>$\delta[f(t)]=\sum_{i=1}^n\frac{1}{|f^`(t_i)|}\delta(t-t_i)$</p>
-<p>含义是:$\delta[f(t)]$是由位于各个$t_i$处,强度为$\frac{1}{|f^`(t_i)|}$的n个冲激函数构成的冲击函数序列.</p>
-<p><strong>其中$t_i是f(t)$=0的根.</strong></p>
-<p><strong>eg.</strong> $f(t)=4t^2-1$,求$\delta[f(t)]$.</p>
-<p>$f^`(t)=8t,f(t)=0的根是t_1=\frac{1}{2},t_2=-\frac{1}{2}$</p>
-<p>$\delta[f(t)]=\frac{1}{4}\delta(t+\frac{1}{2})+\frac{1}{4}\delta(t-\frac{1}{2})$</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-系统框图"><a href="#4-系统框图" class="headerlink" title="4.系统框图"></a><font size="5">4.系统框图</font></h2><p><strong>没啥知识点,就是两种例题.</strong></p>
-<p><font size="4"><strong>Eg1.</strong> 求系统的微分方程</font></p>
-<p><img src="0322-picture1.jpg" alt="picture"></p>
-<p>以两个加法器为核心,得到两个方程:(为了方便,我把t省略了)</p>
-<p>$f=x^{(2)}+a_1x^{(1)}+a_0x$,       还有$y=b_2x^{(2)}+b_1x^{(1)}+b_0x$</p>
-<p>变形:</p>
-<p>$a_0y=b_2(a_0x^{(2)})+b_1(a_0x^{(1)})+b_0(a_0x)$</p>
-<p>$a_1y^{(1)}=b_2(a_1x^{(2)})^<code>+b_1(a_1x^{(1)})^</code>+b_0(a_1x)^`)$</p>
-<p>$y^{(2)}=b_2(x^{(2)})^{<code>}+b_1(x^{(1)})^{</code>}+b_0(x)^{``}$</p>
-<p>$y^{<code>}+a_1y^`+a_0y=b_2f^{</code>}+b_1f^`+b_0f$</p>
-<p><strong>特点:</strong> </p>
-<ol>
-<li>给y变形的步骤和f(t)的每一项刚好一一对应</li>
-<li>答案的形式是f(t),y(t)的形式互相交替.</li>
-</ol>
-<p><font size="4"><strong>Eg2.</strong> 求系统的差分方程</font></p>
-<p><img src="0322-picture2.jpg" alt="picture"></p>
-<p>步骤和特点和求微分方程完全一样!!!</p>
-<p>这个例子的答案是:<br>$y(k)+a_1y(k-1)+a_0y(k-2)=b_2f(k)-b_0f(k-2)$</p>
-<script>
+                <h1 id="一、连续系统的时域分析"><a href="#一、连续系统的时域分析" class="headerlink" title="一、连续系统的时域分析"></a>一、连续系统的时域分析</h1><p>(这入门研究的都是LTI系统,后面就不强调了)</p>
+<h2 id="1-连续系统的响应"><a href="#1-连续系统的响应" class="headerlink" title="1. 连续系统的响应"></a><font size="5">1. 连续系统的响应</font></h2><h3 id="1-微分方程的经典解"><a href="#1-微分方程的经典解" class="headerlink" title="(1)微分方程的经典解"></a>(1)微分方程的经典解</h3><p>激励是$f(t)$,响应是$y(t)$</p>
+<p>$\sum_{j=0}^na_jy^{(j)}(t)=\sum_{i=0}^mb_if^{(i)}(t)$</p>
+<p>其中a,b都是常数.</p>
+<p>这样的方程由齐次解$y_h(t)$和特解$y_p(t)$组成.</p>
+<p>即:$y(t)=y_h(t)+y_p(t)$</p>
+<p><strong>重点(一定要背过):</strong></p>
+<p><img src="0323-picture1.png" alt="不同特征根对应的齐次解表格,第一行错了,少写了待定系数C"></p>
+<p><img src="0323-picture2.png" alt="不同激励对应的特解表格"></p>
+<p><strong>特点:</strong> 齐次解的函数形式取决于系统本身,与$f(t)$无关,称为系统的<strong>自由响应/固有响应</strong>,特征方程的根$\lambda_i$称为系统的<strong>固有频率</strong>,它决定了系统自由响应的形式,但是<strong>齐次解的系数$C_i$是和激励$f(t)$有关的.</strong> 特解的形式完全由激励信号确定,称为<strong>强迫响应</strong>.</p>
+<p><strong>eg.</strong></p>
+<p>某系统的微分方程为:$y^{``}(t)+5y^`(t)+6y(t)=f(t)$</p>
+<p>求:激励$f(t)=10cost,t&gt;=0;y(0)=2,y^`(0)=0$时的全响应.</p>
+<p>解:</p>
+<p>特征方程:$\lambda^2+5\lambda+6=0$</p>
+<p>求得特征根:$\lambda_1=-2,\lambda_2=-3$</p>
+<p>根据表格,对应的齐次解的形式是:$y_h(t)=C_1e^{-2t}+C_2e^{-3t}$</p>
+<p>(这是二个单根,对应的是$(C_1e^{\lambda_1 t}+C_2e^{\lambda_2 t}$)</p>
+<p>根据表格,对应的特解形式:$y_p(t)=Pcost+Qsint$</p>
+<p>$y_p^{``}(t)+5y_p^`(t)+6y_p(t)=f(t)$</p>
+<p>带入$f(t),y_p(t)$得:</p>
+<p>$(-P+5Q+6P)cost+(-Q-5P+6Q)sint=10cost$</p>
+<p>因为上式对所有t&gt;=0成立,所以带入$t=\frac{\pi}{2},t=\pi$</p>
+<p>解得P=Q=1</p>
+<p>所以,$y_p(t)=cost+sint$</p>
+<p>所以全响应:$y(t)=y_h(t)+y_p(t)=C_1e^{-2t}+C_2e^{-3t}+cost+sint$</p>
+<p>带入已知条件:$y(0)=2,y^`(0)=0$</p>
+<p>解得$C_1=2,C_2=-1$</p>
+<p>结果:$y(t)=2e^{-2t}-e^{-3t}+\sqrt2cos(t-\frac{\pi}{4}),t&gt;=0$</p>
+<p><strong>根据响应的形式,也可以分为<font size="4" color="red">瞬态响应和稳态响应</font>,前者随着时间越来越大,会消失,后者不会消失</strong></p>
+<h3 id="2-0时刻解微分方程"><a href="#2-0时刻解微分方程" class="headerlink" title="(2)0时刻解微分方程"></a>(2)0时刻解微分方程</h3><p><strong>经典法不适合0时刻接入激励的情况</strong></p>
+<p>因为t=0_时,激励没有接入,所以$y=y_{zi}$(零输入响应),</p>
+<p>从t=0+时刻开始,才有$y=y_{zi}+y_{zs}$</p>
+<p>通常我们的已知情况是激励接入前,即t=0_时刻.</p>
+<p><strong>eg.</strong></p>
+<p>已知LTI系统的微分方程:</p>
+<p>$y^{<code>}(t)+2y^`(t)+y(t)=f^{</code>}(t)+2f(t)$</p>
+<p>$y(0_{-})=1,y^`({0_{-}})=-1,f(t)=\delta(t)$,</p>
+<p>求$y(0_{+})和y^`({0{+}})$.</p>
+<p><strong>解:</strong></p>
+<p>代入$f(t)=\delta(t)$</p>
+<p>$y^{<code>}(t)+2y^`(t)+y(t)=\delta^{</code>}(t)+2\delta(t)$</p>
+<p>观察发现,右边有$\delta^{<code>}(t)$,一定是$y^{</code>}(t)$包含的.</p>
+<p>设:$y^{<code>}(t)=a\delta^{</code>}(t)+b\delta^`(t)+c\delta(t)+r_0(t)$,其中:$a,b,c,r_0(t)$都是常数.</p>
+<p>则$y^<code>(t)=a\delta^</code>(t)+b\delta(t)+r_1,其中r_1=c\xi(t)+\int_{-\infty}^tr_0(t)$.</p>
+<p>$y(t)=a\delta(t)+r_2,其中r_2=b\xi(t)+\int_{-\infty}^tr_1(t)$</p>
+<p>代入原方程,对应$\delta(t)$的系数,得到:</p>
+<p>$a=1,b+2a=0,c+2b+a=2$,</p>
+<p>解得$a=1,b=-2,c=5$</p>
+<p>$y(0_{+})-y(0_{-})=\int_{0_{-}}^{0_{+}}y^<code>(t)dt=\int_{0_{-}}^{0_{+}}\delta^</code>(t)dt-2\int_{0_{-}}^{0_{+}}\delta(t)dt+0$</p>
+<p>因为$\int_{0_{-}}^{0_{+}}\delta^`(t)dt=0,\int_{0_{-}}^{0_{+}}\delta(t)dt=1$</p>
+<p>所以$y(0_{+})-y(0_{-})=-2$</p>
+<p>得$y(0_{+})=-1$</p>
+<p>$y^<code>(0_{+})-y^</code>(0_{-})=\int_{0_{-}}^{0_{+}}y^{<code>}(t)dt=\int_{0_{-}}^{0_{+}}\delta^{</code>}(t)dt-2\int_{0_{-}}^{0_{+}}\delta^`(t)dt+5\int_{0_{-}}^{0_{+}}\delta(t)dt+0$</p>
+<p>因为$\int_{0_{-}}^{0_{+}}\delta^`(t)dt=0,\int_{0_{-}}^{0_{+}}\delta^{``}(t)dt=0,\int_{0_{-}}^{0_{+}}\delta(t)dt=1$</p>
+<p>所以$y^<code>(0_{+})-y^</code>(0_{-})=5$</p>
+<p>得$y^`(0_{+})=4$</p>
+<p>答案:$y^`(0_{+})=4,y(0_{+})=-1$</p>
+<p><font color="red"><strong>注意(记住):$\int_{0_{-}}^{0_{+}}\delta^`(t)dt=0,\int_{0_{-}}^{0_{+}}\delta^{``}(t)dt=0,\int_{0_{-}}^{0_{+}}\delta(t)dt=1$</strong></font></p>
+<h3 id="3-零输入响应"><a href="#3-零输入响应" class="headerlink" title="(3)零输入响应"></a>(3)零输入响应</h3><p><strong>注意<font color="blue" size="4">:零输入响应不会突变</font></strong></p>
+<p><strong>eg.</strong> </p>
+<p>已知某系统的微分方程:<br>$y^{``}(t)+5y^<code>(t)+4y(t)=2f^</code>(t)-4f(t)$</p>
+<p>初始状态:$y^{`}(0_{-})=5,y({0_{-}})=1$</p>
+<p>求系统的零输入响应</p>
+<p><strong>解:</strong> </p>
+<p>$y_{zi}(0_{+})=y_{zi}(0_{-})=y(0_{-})=1;y^<code>_{zi}(0_{+})=y^</code><em>{zi}(0</em>{-})=y(0_{-})$</p>
+<p>$y^{``}<em>{zi}(t)+5y^`</em>{zi}(t)+4y_{zi}(t)=0$</p>
+<p>其特征方程为:$\lambda^2+5\lambda+4=0$</p>
+<p>特征根:$\lambda_1=-1,\lambda_2=-4$</p>
+<p>根据表格,得到:$y_{zi}(t)=C_1e^{-1t}+C_2e^{-4t}$</p>
+<p>带入$y_{zi}(0_{+})=y_{zi}(0_{-})=y(0_{-})=1;y^<code>_{zi}(0_{+})=y^</code><em>{zi}(0</em>{-})=y(0_{-})$,得到:</p>
+<p>$C_1+C_2=1,-C_1-4C_2=5$</p>
+<p>结果:$y_{zi}(t)=3e^{-1}-2e^{-4t}$</p>
+<h3 id="4-零状态响应"><a href="#4-零状态响应" class="headerlink" title="(4)零状态响应"></a>(4)零状态响应</h3><p><strong>注意<font color="blue" size="4">:零状态响应是在0+点突变的,在0_点永远是零</font></strong></p>
+<p><strong>eg1.</strong></p>
+<p>已知某系统的零状态响应为:</p>
+<p>$y^{``}<em>{zs}(t)+5y^`</em>{zs}(t)+4y_{zs}(t)=2f^`(t)-4f(t)$</p>
+<p>初始状态:$y_{zs}(0_{-})=y^`<em>{zs}(0</em>{-})=0$</p>
+<p>输入$f(t)=\xi(t)$</p>
+<p>得:<br>$y^{``}<em>{zs}(t)+5y^`</em>{zs}(t)+4y_{zs}(t)=2\xi^`(t)-4\xi(t)$</p>
+<p>观察:</p>
+<p>设$y^{``}_{zs}(t)=a\delta(t)+r_0(t)$</p>
+<p>则:$y^{<code>}_{zs}(t)=r_1(t),y^{</code>}_{zs}(t)=r_2(t)$</p>
+<p>a=2</p>
+<p>$y_{zs}(0_{+})-y_{zs}(0_{-})=\int_{0-}^{0+}y^`(t)dt=0$</p>
+<p>$y^<code>_{zs}(0_{+})-y^</code><em>{zs}(0</em>{-})=\int_{0-}^{0+}y^{``}(t)dt=\int_{0-}^{0+}a\delta(t)dt+\int_{0-}^{0+}r_0(t)dt=a=2$</p>
+<p>所以,$y_{zs}(0_{+})=0,y^`_{zs}(0+)=2$</p>
+<p>对于t&gt;0时,</p>
+<p>原方程等价为:</p>
+<p>$y^{``}<em>{zs}(t)+5y^`</em>{zs}(t)+4y_{zs}(t)=-4$</p>
+<p>其特征方程为:$\lambda^2+5\lambda+4=0$</p>
+<p>解得:$\lambda_1=-1,\lambda_2=-4$</p>
+<p>根据表格,对应得齐次解是:</p>
+<p>$y_{zs}(t)=C_1e^{-t}+C_2e^{-4t}$</p>
+<p>带入$y_{zs}(0_{+})=0,y^`_{zs}(0+)=2$</p>
+<p>解得$C_1=2,C_2=-1$</p>
+<p>答案:$y_{zs}(t)=2e^{-t}-e^{-4t},t&gt;=0$</p>
+<p><strong>eg2.</strong></p>
+<p>已知某LTI系统的微分方程:</p>
+<p>$y^<code>(t)+2y(t)=f^{``}(t)+f^</code>(t)+2f(t)$</p>
+<p>加入激励$f(t)=\xi(t)$</p>
+<p>求零状态响应.</p>
+<p><strong>解:</strong></p>
+<p>设$y_1是由f(t)$引起的零状态响应</p>
+<p>则$y_1^`(t)+2y_1(t)=\xi(t),且y_1(0_{-})=0$</p>
+<p>$y_{zs}(t)=y_1^{``}(t)+y_1~(t)+2y_1(t)$</p>
+<p>$y_1(t)$的特征方程$\lambda+2=0$</p>
+<p>又因为激励是$e^0$,所以特解是常数.</p>
+<p>设$y_1(t)=Ce^{-2t}+P$</p>
+<p>观察方程,发现$y_1$不含$\delta(t),所以y_1(0_{+})=y_1(0_{-})=0$,</p>
+<p>带入$y_1^`(0_{+})+2y_1(0_{+})=1$</p>
+<p>解得$y_1(t)=0.5(1-e^{-2t}),t&gt;=0$</p>
+<p>由于$y_1(t)$是零状态响应,所以t&lt;0时,$y_1(t)=0$</p>
+<p>所以$y_1=0.5(1-e^{-2t})\xi(t)$</p>
+<p>所以$y_{zs}(t)=y_1^{``}(t)+y_1~(t)+2y_1(t)=\delta(t)+(1-2e^{-2t})\xi(t)$</p>
+<h3 id="5-全响应"><a href="#5-全响应" class="headerlink" title="(5)全响应"></a>(5)全响应</h3><p><strong>全响应=零输入响应+零状态响应</strong></p>
+<p>解题技巧:</p>
+<p>给$0_{-}$时刻的值,就先求零状态响应,</p>
+<p>给了$0_{+}$时刻的值,就先求零输入响应.</p>
+<h2 id="2-冲激响应和阶跃响应"><a href="#2-冲激响应和阶跃响应" class="headerlink" title="2. 冲激响应和阶跃响应"></a><font size="5">2. 冲激响应和阶跃响应</font></h2><h3 id="1-冲激响应"><a href="#1-冲激响应" class="headerlink" title="(1)冲激响应"></a>(1)冲激响应</h3><h3 id="2-阶跃响应"><a href="#2-阶跃响应" class="headerlink" title="(2)阶跃响应"></a>(2)阶跃响应</h3><h2 id="3-卷积积分"><a href="#3-卷积积分" class="headerlink" title="3. 卷积积分"></a><font size="5">3. 卷积积分</font></h2><h3 id="1-卷积积分"><a href="#1-卷积积分" class="headerlink" title="(1)卷积积分"></a>(1)卷积积分</h3><h3 id="2-卷积的图示"><a href="#2-卷积的图示" class="headerlink" title="(2)卷积的图示"></a>(2)卷积的图示</h3><h2 id="4-卷积积分的性质"><a href="#4-卷积积分的性质" class="headerlink" title="4. 卷积积分的性质"></a><font size="5">4. 卷积积分的性质</font></h2><h3 id="1-卷积的代数运算"><a href="#1-卷积的代数运算" class="headerlink" title="(1)卷积的代数运算"></a>(1)卷积的代数运算</h3><h3 id="2-普通函数和冲激函数的卷积"><a href="#2-普通函数和冲激函数的卷积" class="headerlink" title="(2)普通函数和冲激函数的卷积"></a>(2)普通函数和冲激函数的卷积</h3><h3 id="3-卷积的微分和积分"><a href="#3-卷积的微分和积分" class="headerlink" title="(3)卷积的微分和积分"></a>(3)卷积的微分和积分</h3><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -674,7 +614,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Ricado-Xv.github.io" rel="external nofollow noreferrer">Richardo-Xv</a>
+                    <a href="http://ricado-xv.top" rel="external nofollow noreferrer">Richardo-Xv</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -684,7 +624,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Ricado-Xv.github.io/2020/03/22/xin-hao-yu-xi-tong-ji-chu-zhi-shi/xin-hao-yu-xi-tong-shi-ji-chu-zhi-shi/">http://Ricado-Xv.github.io/2020/03/22/xin-hao-yu-xi-tong-ji-chu-zhi-shi/xin-hao-yu-xi-tong-shi-ji-chu-zhi-shi/</a>
+                    <a href="http://ricado-xv.top/2020/03/23/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong-shi-yu-fen-xi/">http://ricado-xv.top/2020/03/23/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong-shi-yu-fen-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -697,7 +637,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://Ricado-Xv.github.io" target="_blank">Richardo-Xv</a>
+                    <a href="http://ricado-xv.top" target="_blank">Richardo-Xv</a>
                     !
                 </span>
             </div>
@@ -721,11 +661,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/">
-                                    <span class="chip bg-color">-信号与系统</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -894,7 +830,47 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2020/03/22/xin-hao-yu-xi-tong-ji-chu-zhi-shi/xin-hao-yu-xi-tong-shi-ji-chu-zhi-shi/">
+                <a href="/2020/03/23/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong-shi-yu-fen-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="信号与系统/信号与系统-时域分析">
+                        
+                        <span class="card-title">信号与系统/信号与系统-时域分析</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一、连续系统的时域分析(这入门研究的都是LTI系统,后面就不强调了)
+1. 连续系统的响应(1)微分方程的经典解激励是$f(t)$,响应是$y(t)$
+$\sum_{j=0}^na_jy^{(j)}(t)=\sum_{i=0}^mb_if^
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Richardo-Xv
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/22/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong-shi-ji-chu-zhi-shi/">
                     <div class="card-image">
                         
                         
@@ -927,60 +903,11 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/">
                         <span class="chip bg-color">-信号与系统</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/20/ji-suan-ji-zu-cheng-ding-dian-shu-yun-suan/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="计算机组成-定点数的加减乘除">
-                        
-                        <span class="card-title">计算机组成-定点数的加减乘除</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            123小代码:&lt;table&gt; &lt;tr&gt; &lt;th&gt; &lt;td&gt; 异或: \bigoplus不等号: \not =
-一 、定点数加减运算1. 补码2. BCD码3. 移码
-1. 补码(最常用)
-$[
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-20
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Richardo-Xv
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
-                        <span class="chip bg-color">-计算机组成原理</span>
                     </a>
                     
                 </div>
@@ -1152,13 +1079,6 @@ $[
 </main>
 
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
 
     <footer class="page-footer bg-color">
     
@@ -1166,13 +1086,13 @@ $[
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
-            <a href="http://Ricado-Xv.github.io" target="_blank">Richardo-Xv</a>
+            <a href="http://ricado-xv.top" target="_blank">Richardo-Xv</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9k</span>&nbsp;字
+                class="white-color">10.6k</span>&nbsp;字
             
             
             
